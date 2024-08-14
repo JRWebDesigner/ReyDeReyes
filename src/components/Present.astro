@@ -1,11 +1,37 @@
-<div id="image-present" class="h-[50vh] transitio-[1s opacity] bg-orange-300 flex justify-center items-center">
-    <img src="/present.jpg" alt="Rey de Reyes">
-    <h1>Rey de Reyes instituto academoco Boliva</h1>
+<div id="container_present" class="h-[70vh] relative bg-black flex justify-center items-center flex-wrap bg-opacity-80">
+    
+    <img id="present" class="container_animation w-full h-full object-cover absolute -z-0 opacity-35" src="https://st2.depositphotos.com/3662505/6878/i/450/depositphotos_68789097-stock-photo-students.jpg" alt="imagen de contenedor de maiz y soya">
 </div>
-
+<style>
+    .container_animation{
+        animation:1s aparecer;
+    }
+    @keyframes aparecer {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0.2;
+        }
+    }
+</style>
 <script>
-    const images=document.getElementById('image-present');
-    setTimeout(()=>{
-        images.classList.replace('opacity-0', 'opacity-100')
-    },200)
+    import ImagesJSON from './images.json';
+    let i=0;
+    const images=document.getElementById('present');
+    console.log(ImagesJSON.length)
+    setInterval(()=>{
+        if(i===(ImagesJSON.length)) {
+            i=0
+        }
+        if(images.classList.contains('container_animation')){
+            images.classList.remove('container_animation')
+        }
+        else{
+            images.classList.add('container_animation')
+        }
+        images.attributes[2].value=ImagesJSON[i].url
+        i++
+    },2500)
+
 </script>

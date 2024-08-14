@@ -1,9 +1,45 @@
-<header class="h-20 bg-orange-700 flex justify-around items-center">
-    <h1>Rey de Reyes</h1>1
-    <nav>
-        <ul class="flex gap-10 text-3xl items-center justify-center">
+---
+import Logo from './Logo.astro'
+---
+<header class="relative min-h-20 px-[10vw] py-2 bg-blue-900 flex justify-center z-50 md:justify-around items-center">
+    <Logo />
+    <nav class="hidden md:block">
+        <ul class="flex gap-20 text-3xl items-center justify-center">
             <li><a href="/">Inicio</a></li>
-            <li><a href="/Sucursale">Sucursales</a></li>
+            <li><a href="/Sucursales">Sucursales</a></li>
+            <li><a href="/Carreras">Carreras</a></li>
+            <li><a href="/Noticias">Noticias</a></li>
+
+        </ul>
+    </nav>
+    <button
+        title="menu Rey de Reyes"
+        name="button"
+        class="z-30 md:hidden mt-1 absolute right-7"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="55"
+            height="55"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#fff"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path
+                d="M4 18l16 0"></path></svg
+        >
+    </button>
+    <nav
+        class="nav-mobile p-4 absolute right-0 rounded-b-lg w-[60vw] bg-blue-900 h-[60vh] z-50"
+    >
+        <ul class="grid place-items-center gap-10 text-[#831a1a] z-50">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/Sucursales">Sucursales</a></li>
+            <li><a href="/Carreras">Carreras</a></li>
             <li><a href="/Noticias">Noticias</a></li>
         </ul>
     </nav>
@@ -12,6 +48,24 @@
     li{
         font-size: 2rem;
         font-weight: 900; 
-        color:rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
+    }
+    li:hover{
+        color:rgb(255, 123, 0);
+    }
+    .nav-mobile {
+        top: -1000%;
+        transform: scaleY(0);
+        opacity: 0;
+        transition:
+            1s top,
+            1s transform,
+            1.3s opacity;
+        z-index: 0 !important;
+    }
+    button:hover ~ .nav-mobile {
+        top: 100%;
+        opacity: 100;
+        transform: scaleY(100%);
     }
 </style>

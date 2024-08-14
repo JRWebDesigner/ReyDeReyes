@@ -29,9 +29,31 @@ import Footer from '../components/Footer.astro';
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: "mont";
+		src: url("/Fonts/Mont-Bold.ttf");
+	}
+	@font-face {
+		font-family: "poppins";
+		src: url("/Fonts/Poppins-Regular.ttf");
+	}
+	@font-face {
+		font-family: "montserrat";
+		src: url("/Fonts/Montserrat-Regular.otf");
+	}
+	body,html{
+		background-color: #ffffff;
+	}
 	h1{
+		font-family:"mont";
 		color:#020236;
-		font-size: 3.6rem;
-		font-weight: bold;
+	}
+	.subtitle{
+		font-family:"montserrat";
+		color:#ff9100;
+	}
+	p,span,a{
+		margin:10px;
+		font-family: 'poppins';
 	}
 </style>
