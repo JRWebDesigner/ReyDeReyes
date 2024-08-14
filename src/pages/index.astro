@@ -8,34 +8,34 @@ import Logo from "../components/Logo.astro";
   <Present />
 
   <div class="flex items-center justify-center mt-20">
-    <h1 class="text-blue-950 text-center z-10 md:text-8xl text-6xl">
+    <h1 class="text-blue-950 text-center z-10 md:text-8xl text-3xl">
       REY DE REYES <br />
       <small>Excelencia en Educación</small>
     </h1>
   </div>
 
   <div
-    class="mt-10 text-3xl flex-col font-semibold flex items-center text-center h-[30vh] bg-white px-[10vw]"
+    class="md:my-10 text-3xl flex-col font-semibold flex items-center text-center h-[30vh] bg-white px-[2vw] md:px-[10vw]"
   >
-    <p>
+    <p class="text-sm">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, porro
       repellat! Atque voluptate quae, rem sapiente temporibus soluta blanditiis
       rerum laborum sit mollitia quidem obcaecati, natus omnis, maxime doloribus
     </p>
   </div>
 
-  <h2 class="subtitle text-center my-10 mt-20 text-4xl md:text-6xl font-bold">
+  <h2 class="subtitle text-center md:my-10 md:mt-20 text-2xl md:text-6xl font-bold">
     NUESTRAS CARRERAS
   </h2>
   <div
     class="hidden xl:grid xl:grid-cols-2 place-items-center xl:px-[20vw] md:flex md:flex-wrap md:justify-around mb-10 bg-gradient-to-tr from-[#ff9100] to-yellow-300 p-6 gap-20"
   >
     <a
-      class="bg-red-600 relative w-[400px] h-[400px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-sm"
+      class="bg-red-600 relative w-[60%] md:w-[400px] md:h-[400px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-sm"
       href="/Carreras"
     >
       <div class="z-10 text-white">
-        <h2 class="text-5xl font-bold text-center">Nombre de Carrera</h2>
+        <h2 class="text-2xl md:text-5xl font-bold text-center">Nombre de Carrera</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
           recusandae.
@@ -111,35 +111,21 @@ import Logo from "../components/Logo.astro";
     </a>
   </div>
   <div
-    class="relative md:hidden flex flex-wrap justify-around mb-10 bg-gradient-to-tr from-[#ff9100] to-yellow-300 p-6 gap-20"
+    class="relative w-full md:hidden flex flex-wrap justify-around mb-10 bg-gradient-to-tr from-[#ff9100] to-yellow-300 p-6 gap-20"
   >
-    <button
-      id="prevSlide"
-      class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-    >
-      &#10094;
-    </button>
-    <button
-      id="nextSlide"
-      class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-    >
-      &#10095;
-    </button>
+
     <a
-      class="bg-red-600 relative w-[400px] h-[400px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-sm"
+      class="bg-red-600 relative w-[60%] rounded-3xl flex flex-col justify-center items-center p-3 shadow-sm"
       href="/Carreras"
     >
       <div class="z-10 text-white">
-        <h2 class="text-5xl font-bold text-center">Nombre de Carrera</h2>
-        <p>
+        <h2 class="text-xl md:text-5xl font-bold text-center">Nombre de Carrera</h2>
+        <p class="text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
           recusandae.
         </p>
       </div>
-      <button
-        class="absolute cursor-pointer flex justify-center bg-orange-500 w-[80%] px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-blue-900 hover:scale-105 duration-500 hover:ring-1 font-mono z-30 bottom-5 text-3xl text-center"
-        >Saber más -->
-      </button>
+      
     </a>
   </div>
   <h2 class="subtitle text-center my-10 mt-20 text-4xl md:text-6xl font-bold">
@@ -149,11 +135,11 @@ import Logo from "../components/Logo.astro";
     class="flex flex-wrap justify-around mb-10 bg-gradient-to-tr from-[#6b8eff] to-blue-900 p-6 gap-20"
   >
     <a
-      class="bg-gradient-to-r to-red-500 from-green-400 relative w-[700px] md:w-[800px] h-[49vh] rounded-lg flex justify-center items-center p-6"
+      class="bg-gradient-to-r to-red-500 from-green-400 relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6"
       href="/Sucursales"
     >
       <div class="z-10">
-        <h2 class="text-5xl text-white">
+        <h2 class="text-3xl md:text-5xl text-white">
           <strong>Rey de Reyes </strong>en La Paz
         </h2>
         <div class="mt-20">
@@ -162,7 +148,7 @@ import Logo from "../components/Logo.astro";
         </div>
       </div>
       <button
-        class="bg-orange-500 text-3xl font-bold text-white p-3 w-[600px] absolute bottom-5 z-20 rounded-xl shadow-md hover:bg-red-600 transition-all duration-75"
+        class="bg-orange-500 text-lg md:text-3xl font-bold text-white p-3 w-[95%] absolute bottom-5 z-20 rounded-xl shadow-md hover:bg-red-600 transition-all duration-75"
       >
         Ver Más
       </button>
@@ -173,11 +159,11 @@ import Logo from "../components/Logo.astro";
       />
     </a>
     <a
-      class="bg-gradient-to-l to-red-600 from-green-600 relative w-[700px] md:w-[800px] h-[49vh] rounded-lg flex justify-center items-center p-6"
+      class="bg-gradient-to-l to-red-600 from-green-600 relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6"
       href="/Sucursales"
     >
       <div class="z-10">
-        <h2 class="text-5xl text-white">
+        <h2 class="text-3xl md:text-5xl text-white">
           <strong>Rey de Reyes </strong>en El Alto
         </h2>
         <div class="mt-20">
@@ -192,11 +178,11 @@ import Logo from "../components/Logo.astro";
       />
     </a>
     <a
-      class="bg-gradient-to-r to-blue-200 from-blue-700 relative w-[700px] md:w-[800px] h-[49vh] rounded-lg flex justify-center items-center p-6"
+      class="bg-gradient-to-r to-blue-200 from-blue-700 relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6"
       href="/Sucursales"
     >
       <div class="z-10">
-        <h2 class="text-5xl text-white">
+        <h2 class="text-3xl md:text-5xl text-white">
           <strong> Rey de Reyes </strong>en Cochabamba
         </h2>
         <div class="mt-20">
@@ -211,11 +197,11 @@ import Logo from "../components/Logo.astro";
       />
     </a>
     <a
-      class="bg-gradient-to-r to-green-700 from-white relative w-[700px] md:w-[800px] h-[49vh] rounded-lg flex justify-center items-center p-6"
+      class="bg-gradient-to-r to-green-700 from-white relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6"
       href="/Sucursales"
     >
       <div class="z-10">
-        <h2 class="text-5xl text-white">
+        <h2 class="text-3xl md:text-5xl text-white">
           <strong>Rey de Reyes </strong>en Santa Cruz
         </h2>
         <div class="mt-20">
@@ -233,7 +219,7 @@ import Logo from "../components/Logo.astro";
   <h2 class="subtitle text-center my-10 mt-20 text-4xl md:text-6xl font-bold">
     GALERIA DE FOTOS
   </h2>
-  <div class="relative m-auto overflow-hidden w-[80%] lg:max-w-[1230px]">
+  <div class="hidden relative m-auto overflow-hidden w-[80%] lg:max-w-[1230px]">
     <div
       class="flex transition-transform duration-500 ease-in-out"
       style="transform: translateX(-0%)"
@@ -301,10 +287,8 @@ import Logo from "../components/Logo.astro";
 </Layout>
 <style>
   h3 {
-    font:;
     color: rgb(0, 0, 0);
     font-weight: 700;
-    font-size: 2.2rem;
   }
   .card {
     width: 700px;
