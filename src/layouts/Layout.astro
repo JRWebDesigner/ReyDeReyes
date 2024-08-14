@@ -1,0 +1,37 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Whatsapp from '../components/whatsapp.astro'
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Descubre la elegancia y el cuidado personal en manos de una profesional con experiencia y dedicación. Con años de experiencia en el mundo de la belleza, te ofrece una gama completa de servicios para realzar tu estilo y bienestar." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="./Perfil/perfil.webp" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<slot />
+			<Whatsapp />
+		</main>
+		<Footer /> 
+	</body>
+</html>
+<style is:global>
+	h1{
+		color:#020236;
+		font-size: 3.6rem;
+		font-weight: bold;
+	}
+</style>
