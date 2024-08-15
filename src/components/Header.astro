@@ -1,159 +1,145 @@
 ---
-import Logo from "./Logo.astro";
-import Nav from "./Nav.astro";
+import Logo from './Logo.astro'
+import Nav from './Nav.astro'
 ---
-
-<header
-  class="relative w-full min-h-20 md:min-h-32 lg:min-h-36 px-[6vw] bg-orange-600 flex justify-around z-50 md:justify-around items-center"
->
-  <Logo />
-  <nav class="hidden xl:block">
-    <ul class="flex gap-10 text-3xl items-center justify-start">
-      <Nav />
-    </ul>
-  </nav>
-  <button
-    title="menu Rey de Reyes"
-    name="button"
-    id="buttonNav"
-    class="z-50 xl:hidden mt-1 absolute right-7"
-  >
-    <div class="burger-icon">
-      <label class="burger" for="burger">
-        <input class="line" type="checkbox" id="burger" />
-      </label>
-    </div>
-  </button>
-  <nav
-    id=""
-    class="navMobile block lg:hidden desact Aparecer p-4 absolute right-1 rounded-b-lg min-w-[40vw] bg-orange-600 h-[60vh] z-40 rounded-bl-3xl"
-  >
-    <ul
-      class="w-full h-full flex flex-col justify-center items-center text-lg z-50"
+<header class="relative w-full min-h-20 md:min-h-32 lg:min-h-36 px-[6vw] bg-orange-600 flex justify-around z-50 md:justify-around items-center">
+    <Logo />
+    <nav class="hidden lg:block">
+        <ul class="flex gap-10 text-3xl items-center justify-start">
+            <Nav />
+        </ul>
+    </nav>
+    <button
+        title="menu Rey de Reyes"
+        name="button"
+        id="buttonNav"
+        class="z-30 lg:hidden mt-1 absolute right-7"
     >
-      <Nav />
-    </ul>
-  </nav>
+    <div class="burger-icon">
+        <label class="burger" for="burger">
+          <input class="line" type="checkbox" id="burger" />
+        </label>
+      </div>
+      
+    </button>
+    <nav
+        class="block lg:hidden nav-mobile p-4 absolute right-1 rounded-b-lg min-w-[40vw] bg-orange-600 h-[60vh] z-50 rounded-bl-3xl"
+    >
+        <ul class="w-full h-full flex flex-col justify-center items-center  text-lg z-50">
+           <Nav />
+        </ul>
+    </nav>
 </header>
 <style>
-  header {
-    width: 100% !important;
-  }
-  nav{
-    transition:
-    1s top,
-    1s transform,
-    1.3s opacity;
-  }
-  .desact{
-    top: -100% !important;
-    transform: scaleY(0) !important;
-    opacity: 0 !important;
-    z-index: 40 !important;
-  }
-  .burger {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-    cursor: pointer;
-    transition: 300ms;
-    border-radius: 10px;
-  }
-  .burger input[type="checkbox"] {
-    appearance: none;
-    transition: 300ms;
-  }
-
-  .burger::before,
-  .burger::after {
-    content: "";
-    transition: 300ms;
-    transform-origin: center center;
-  }
-
-  .burger::before {
-    transform: translateY(8px);
-  }
-  .burger::after {
-    transform: translateY(-8px);
-  }
-  .burger .line,
-  .burger::before,
-  .burger::after {
-    width: 20px;
-    height: 4px;
-    display: block;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    position: absolute;
-  }
-
-  .burger .line:checked {
-    width: 0;
-    transition-delay: 100ms;
-  }
-  .burger:has(.line:checked)::before {
-    animation: animation1 400ms ease-out 0s 1 both;
-  }
-  .burger:has(.line:checked)::after {
-    animation: animation2 400ms ease-out 0s 1 both;
-  }
-
-  .burger:hover {
-    background: #6589ff;
-    border-radius: 50%;
-  }
-
-  .burger:hover .line,
-  .burger:hover::before,
-  .burger:hover::after {
-    background: #e8e8e8;
-  }
-
-  .burger:active {
-    scale: 0.95;
-  }
-  @keyframes animation1 {
-    0% {
-      transform: translateY(8px) rotate(0deg);
+    header{
+        width: 100% !important;
     }
-    50% {
-      transform: translateY(0px) rotate(0deg);
+    svg{
+        transition: .4s all;
     }
-    100% {
-      transform: translateY(0px) rotate(45deg);
+    .nav-mobile {
+        z-index: 40;
+        top: -1000%;
+        transform: scaleY(0);
+        opacity: 0;
+        display: hidden;
+        transition:
+            1s top,
+            1s transform,
+            1.3s opacity,
+            1.3s display;
+        z-index: 0 !important;
     }
+    .burger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  transition: 300ms;
+  border-radius: 10px;
+}
+.burger input[type="checkbox"] {
+  appearance: none;
+  transition: 300ms;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  transition: 300ms;
+  transform-origin: center center;
+}
+
+.burger::before {
+  transform: translateY(8px);
+}
+.burger::after {
+  transform: translateY(-8px);
+}
+.burger .line,
+.burger::before,
+.burger::after {
+  width: 20px;
+  height: 4px;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  position: absolute;
+}
+
+
+
+.burger:hover {
+  background: #6589ff;
+  border-radius: 50%;
+}
+
+.burger:hover .line,
+.burger:hover::before,
+.burger:hover::after {
+  background: #e8e8e8;
+}
+
+.burger:active {
+  scale: 0.95;
+}
+@keyframes animation1 {
+  0% {
+    transform: translateY(8px) rotate(0deg);
   }
-  @keyframes animation2 {
-    0% {
-      transform: translateY(-8px) rotate(0deg);
-    }
-    50% {
-      transform: translateY(0px) rotate(0deg);
-    }
-    100% {
-      transform: translateY(0px) rotate(-45deg);
-    }
+  50% {
+    transform: translateY(0px) rotate(0deg);
   }
-  .navMobile.Aparecer{
-    z-index: 40;
-    top: 100%;
-    transform: scaleY(1);
-    opacity: 1;
+  100% {
+    transform: translateY(0px) rotate(45deg);
   }
+}
+@keyframes animation2 {
+  0% {
+    transform: translateY(-8px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(-45deg);
+  }
+}
+
+    #buttonNav:hover ~ .nav-mobile {
+        top: 100%;
+        opacity: 100;
+        transform: scaleY(100%);
+        display: block;
+    }
+    #buttonNav:hover{
+        display: hidden;
+    }
+    .nav-movile{
+        color:#831a1a !important;
+    }
 </style>
-<script>
-  const buttonNav = document.getElementById("buttonNav");
-  const navMobile = document.querySelector(".navMobile");
-  buttonNav.addEventListener("click", (e) => {
-    console.log(e)
-    if(navMobile.classList.contains('desact')){
-      navMobile.classList.remove('desact')
-    }
-  
-});
-</script>
