@@ -26,7 +26,7 @@ import Nav from "./Nav.astro";
   </button>
   <nav
     id=""
-    class="navMobile block lg:hidden desact p-4 absolute right-1 rounded-b-lg min-w-[40vw] bg-orange-600 h-[60vh] z-50 rounded-bl-3xl"
+    class="navMobile block lg:hidden desact Aparecer p-4 absolute right-1 rounded-b-lg min-w-[40vw] bg-orange-600 h-[60vh] z-40 rounded-bl-3xl"
   >
     <ul
       class="w-full h-full flex flex-col justify-center items-center text-lg z-50"
@@ -39,20 +39,17 @@ import Nav from "./Nav.astro";
   header {
     width: 100% !important;
   }
-  svg {
-    transition: 0.4s all;
-  }
-  .desact {
-    z-index: 40;
-    top: -100%;
-    transform: scaleY(0);
-    opacity: 0;
+  nav{
     transition:
-      1s top,
-      1s transform,
-      1.3s opacity,
-      1.3s display;
-
+    1s top,
+    1s transform,
+    1.3s opacity;
+  }
+  .desact{
+    top: -100% !important;
+    transform: scaleY(0) !important;
+    opacity: 0 !important;
+    z-index: 40 !important;
   }
   .burger {
     width: 40px;
@@ -142,7 +139,7 @@ import Nav from "./Nav.astro";
       transform: translateY(0px) rotate(-45deg);
     }
   }
-  .Aparecer{
+  .navMobile.Aparecer{
     z-index: 40;
     top: 100%;
     transform: scaleY(1);
@@ -152,16 +149,11 @@ import Nav from "./Nav.astro";
 <script>
   const buttonNav = document.getElementById("buttonNav");
   const navMobile = document.querySelector(".navMobile");
-  let click=1
-  buttonNav.addEventListener("click", () => {
-    if(click==1) {
-      navMobile.classList.add("Aparecer");
-      click=2
-    }else{
-      if(click==2){
-        navMobile.classList.remove("Aparecer");
-      }
+  buttonNav.addEventListener("click", (e) => {
+    console.log(e)
+    if(navMobile.classList.contains('desact')){
+      navMobile.classList.remove('desact')
     }
-
-  });
+  
+});
 </script>
