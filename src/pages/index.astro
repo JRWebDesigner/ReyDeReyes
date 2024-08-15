@@ -1,12 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Present from "../components/Present.astro";
-import Logo from "../components/Logo.astro";
+import ListaSucursales from '../components/ListaSucursales.astro'
+import GaleriaFotos from "../components/Carreras.astro";
+import GaleriaPrincipal from "../components/CarruselesFotos/GaleriaPrincipal.astro";
 ---
 
 <Layout title="Rey de Reyes | Instituro academico ">
-  <Present />
-
+  <div class="w-full md:h-[50vh]">
+    <Present />
+  </div>
   <div class="flex items-center justify-center mt-20">
     <h1 class="text-blue-950 text-center z-10 md:text-8xl text-3xl">
       REY DE REYES <br />
@@ -18,253 +21,32 @@ import Logo from "../components/Logo.astro";
     class="md:my-10 text-3xl flex-col font-semibold flex items-center text-center h-[30vh] bg-white px-[2vw] md:px-[10vw]"
   >
     <p class="text-sm md:text-3xl">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, porro
-      repellat! Atque voluptate quae, rem sapiente temporibus soluta blanditiis
-      rerum laborum sit mollitia quidem obcaecati, natus omnis, maxime doloribus
+      ¡Estudia con nosotros! Somos el mejor centro de estudios y cursos en la ciudad
+      ¡te esperamos🙂!
     </p>
   </div>
 
-  <h2 class="subtitle text-center md:my-10 md:mt-20 text-3xl md:text-6xl font-bold">
+  <h2 class="subtitle text-center text-2xl md:text-6xl font-bold">
     NUESTRAS CARRERAS
   </h2>
   <div
-    class="hidden xl:grid xl:grid-cols-2 place-items-center xl:px-[20vw] md:flex md:flex-wrap md:justify-around mb-10 bg-gradient-to-tr from-[#ff9100] to-yellow-300 p-6 gap-20"
+    class="mb-10 relative w-full min-h-[40vh] bg-gray-200 p-6 flex justify-center items-center"
   >
-    <a
-      class="bg-red-600 relative w-[60%] md:w-[400px] md:h-[400px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-sm"
-      href="/Carreras"
-    >
-      <div class="z-10 text-white">
-        <h2 class="text-2xl md:text-5xl font-bold text-center">Nombre de Carrera</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          recusandae.
-        </p>
-      </div>
-      <button
-        class="absolute cursor-pointer flex justify-center bg-orange-500 w-[80%] px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-blue-900 hover:scale-105 duration-500 hover:ring-1 font-mono z-30 bottom-5 text-3xl text-center"
-        >Saber más -->
-      </button>
-    </a>
-    <a
-      class="bg-gray-700 relative w-[400px] h-[400px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-lg shadow-black"
-      href="/Carreras"
-    >
-      <img
-        class="container_animation rounded-3xl w-full h-full object-cover absolute -z-0 opacity-45"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_aDcmRvkgfDxfpL7gpcv9ydr1JmSZhdDgfw&s"
-        alt="imagen de carrera universitaria"
-      />
-      <div class="z-10 text-white">
-        <h2 class="text-5xl font-bold text-center">Nombre de Carrera</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          recusandae.
-        </p>
-      </div>
-      <button
-        class="absolute cursor-pointer flex justify-center bg-orange-500 w-[80%] px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-blue-900 hover:scale-105 duration-500 hover:ring-1 font-mono z-30 bottom-5 text-3xl text-center"
-        >Saber más -->
-      </button>
-    </a>
-    <a
-      class="bg-gray-700 relative w-[400px] h-[400px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-lg shadow-black"
-      href="/Carreras"
-    >
-      <img
-        class="container_animation rounded-3xl w-full h-full object-cover absolute -z-0 opacity-45"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_aDcmRvkgfDxfpL7gpcv9ydr1JmSZhdDgfw&s"
-        alt="imagen de carrera universitaria"
-      />
-      <div class="z-10 text-white">
-        <h2 class="text-5xl font-bold text-center">Nombre de Carrera</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          recusandae.
-        </p>
-      </div>
-      <button
-        class="absolute cursor-pointer flex justify-center bg-orange-500 w-[80%] px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-blue-900 hover:scale-105 duration-500 hover:ring-1 font-mono z-30 bottom-5 text-3xl text-center"
-        >Saber más -->
-      </button>
-    </a>
-    <a
-      class="bg-gray-700 relative w-[400px] h-[400px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-lg shadow-black"
-      href="/Carreras"
-    >
-      <img
-        class="container_animation rounded-3xl w-full h-full object-cover absolute -z-0 opacity-45"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_aDcmRvkgfDxfpL7gpcv9ydr1JmSZhdDgfw&s"
-        alt="imagen de carrera universitaria"
-      />
-      <div class="z-10 text-white">
-        <h2 class="text-5xl font-bold text-center">Nombre de Carrera</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          recusandae.
-        </p>
-      </div>
-      <button
-        class="absolute cursor-pointer flex justify-center bg-orange-500 w-[80%] px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-blue-900 hover:scale-105 duration-500 hover:ring-1 font-mono z-30 bottom-5 text-3xl text-center"
-        >Saber más -->
-      </button>
-    </a>
+  <GaleriaFotos/>
+    
   </div>
-  <div
-    class="relative w-full md:hidden flex flex-wrap justify-around mb-10 bg-gradient-to-tr from-[#ff9100] to-yellow-300 p-6 gap-20"
-  >
-
-    <a
-      class="bg-red-600 relative w-[60%] min-h-[300px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-sm"
-      href="/Carreras"
-    >
-      <div class="z-10 text-white">
-        <h2 class="text-xl md:text-5xl font-bold text-center">Nombre de Carrera</h2>
-        <p class="text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-          recusandae.
-        </p>
-      </div>
-      
-    </a>
-  </div>
-  <h2 class="subtitle text-center my-10 mt-20 text-4xl md:text-6xl font-bold">
+  <h2 class="subtitle text-center md:my-10 md:mt-20 text-2xl md:text-6xl font-bold">
     NUESTRAS SUCURSALES
   </h2>
-  <div
-    class="flex flex-wrap justify-around mb-10 bg-gradient-to-tr from-[#6b8eff] to-blue-900 p-6 gap-20"
-  >
-    <a
-      class="bg-gradient-to-r to-red-500 from-green-400 relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6"
-      href="/Sucursales"
-    >
-      <div class="z-10">
-        <h2 class="text-3xl md:text-5xl text-white">
-          <strong>Rey de Reyes </strong>en La Paz
-        </h2>
-        <div class="mt-20">
-          <h3>Ubicacion:</h3>
-          <h3>Telefono: +591 77777777</h3>
-        </div>
-      </div>
-      <button
-        class="bg-orange-500 text-lg md:text-3xl font-bold text-white p-3 w-[95%] absolute bottom-5 z-20 rounded-xl shadow-md hover:bg-red-600 transition-all duration-75"
-      >
-        Ver Más
-      </button>
-      <img
-        class="w-full h-full absolute z-0 object-cover opacity-35"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Z_dNx2R-NxSJNNIZSVJhiJLcF5sO4C5E9Q&s"
-        alt=""
-      />
-    </a>
-    <a
-      class="bg-gradient-to-l to-red-600 from-green-600 relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6"
-      href="/Sucursales"
-    >
-      <div class="z-10">
-        <h2 class="text-3xl md:text-5xl text-white">
-          <strong>Rey de Reyes </strong>en El Alto
-        </h2>
-        <div class="mt-20">
-          <h3>Ubicacion:</h3>
-          <h3>Telefono: +591 77777777</h3>
-        </div>
-      </div>
-      <img
-        class="w-full h-full absolute z-0 object-cover opacity-35"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Z_dNx2R-NxSJNNIZSVJhiJLcF5sO4C5E9Q&s"
-        alt=""
-      />
-    </a>
-    <a
-      class="bg-gradient-to-r to-blue-200 from-blue-700 relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6"
-      href="/Sucursales"
-    >
-      <div class="z-10">
-        <h2 class="text-3xl md:text-5xl text-white">
-          <strong> Rey de Reyes </strong>en Cochabamba
-        </h2>
-        <div class="mt-20">
-          <h3>Ubicacion:</h3>
-          <h3>Telefono: +591 77777777</h3>
-        </div>
-      </div>
-      <img
-        class="w-full h-full absolute z-0 object-cover opacity-35"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Z_dNx2R-NxSJNNIZSVJhiJLcF5sO4C5E9Q&s"
-        alt=""
-      />
-    </a>
-    <a
-      class="bg-gradient-to-r to-green-700 from-white relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6"
-      href="/Sucursales"
-    >
-      <div class="z-10">
-        <h2 class="text-3xl md:text-5xl text-white">
-          <strong>Rey de Reyes </strong>en Santa Cruz
-        </h2>
-        <div class="mt-20">
-          <h3>Ubicacion:</h3>
-          <h3>Telefono: +591 77777777</h3>
-        </div>
-      </div>
-      <img
-        class="w-full h-full absolute z-0 object-cover opacity-35"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Z_dNx2R-NxSJNNIZSVJhiJLcF5sO4C5E9Q&s"
-        alt=""
-      />
-    </a>
-  </div>
-  <h2 class="subtitle text-center my-10 mt-20 text-4xl md:text-6xl font-bold">
+  <ListaSucursales />
+  <h2 class="subtitle text-center md:my-10 md:mt-20 text-2xl md:text-6xl font-bold">
     GALERIA DE FOTOS
   </h2>
-  <div class="hidden relative m-auto overflow-hidden w-[80%] lg:max-w-[1230px]">
-    <div
-      class="flex transition-transform duration-500 ease-in-out"
-      style="transform: translateX(-0%)"
-    >
-      <!-- Slide 1 -->
-      <div class="flex-none w-full">
-        <img
-          src="https://via.placeholder.com/800x400?text=Slide+1"
-          alt="Slide 1"
-          class="w-full h-auto object-cover"
-        />
-      </div>
-      <!-- Slide 2 -->
-      <div class="flex-none w-full">
-        <img
-          src="https://via.placeholder.com/800x400?text=Slide+2"
-          alt="Slide 2"
-          class="w-full h-auto object-cover"
-        />
-      </div>
-      <!-- Slide 3 -->
-      <div class="flex-none w-full">
-        <img
-          src="https://via.placeholder.com/800x400?text=Slide+3"
-          alt="Slide 3"
-          class="w-full h-auto object-cover"
-        />
-      </div>
-    </div>
-    <!-- Navigation buttons -->
-    <button
-      id="prevSlide"
-      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-    >
-      &#10094;
-    </button>
-    <button
-      id="nextSlide"
-      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-    >
-      &#10095;
-    </button>
-
+  <div class="w-full h-[40vw] grid place-items-center m-auto bg-gray-100">
+    <GaleriaPrincipal />
   </div>
-  <h2 class="subtitle text-center my-10 mt-20 text-4xl md:text-6xl font-bold">
+  
+  <h2 class="subtitle text-center md:my-10 md:mt-20 text-2xl md:text-6xl font-bold">
     NOTICIAS
   </h2>
   <div class="flex justify-around flex-wrap md:flex-nowrap">
@@ -287,12 +69,11 @@ import Logo from "../components/Logo.astro";
 </Layout>
 <style>
   h3 {
-    color: rgb(0, 0, 0);
     font-weight: 700;
   }
   .card {
-    width: 700px;
-    height: 500px;
+    width: 500px;
+    height: 250px;
     margin: 20px;
     background: #eee;
     padding: 0.4em;
@@ -316,7 +97,7 @@ import Logo from "../components/Logo.astro";
 
   .category {
     text-transform: uppercase;
-    font-size: 2.5em;
+    font-size: 1.5rem;
     font-weight: 600;
     color: rgb(63, 121, 230);
     padding: 10px 7px 0;
@@ -330,7 +111,7 @@ import Logo from "../components/Logo.astro";
     font-weight: 600;
     color: rgb(88, 87, 87);
     padding: 7px;
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
 
   .heading:hover {
@@ -344,7 +125,23 @@ import Logo from "../components/Logo.astro";
   .name:hover {
     cursor: pointer;
   }
+  @media (min-width: 768px) {
+    .card {
+    width: 800px;
+    height: 550px;
+  }
+  .card-image {
+    height: 380px;
+  }
 
+.category {
+    font-size: 1.9rem;
+  }
+ .heading {
+    font-size: 1.5rem;
+  }
+
+}
   .save:hover .svg {
     fill: #ced8de;
   }

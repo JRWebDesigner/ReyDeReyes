@@ -1,0 +1,35 @@
+<div id="galeriaPrincipal" class="carousel slide w-full h-[40vw]">
+    <div id="loadImages" class="carousel-inner">
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#galeriaPrincipal" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"><svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="#000000"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-track-prev"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" /><path d="M9.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z" /></svg></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#galeriaPrincipal" data-bs-slide="next">
+      <span class="carousel-control-next-icon object-fill" aria-hidden="true"><svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="#000000"  class="icon icon-tabler icons-tabler-filled icon-tabler-player-track-next"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" /><path d="M13 5v14c0 .86 1.012 1.318 1.659 .753l8 -7a1 1 0 0 0 0 -1.506l-8 -7c-.647 -.565 -1.659 -.106 -1.659 .753z" /></svg></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <script>
+    import ImagesPrincipalJSON from './ImagesPrincipalJSON.json'
+    const loadImages = document.getElementById('loadImages')
+console.log(
+    ImagesPrincipalJSON[0].imagen
+)
+    loadImages.innerHTML=ImagesPrincipalJSON.map((imagenes)=>{
+            if(ImagesPrincipalJSON[0].imagen === imagenes.imagen){
+                return( `<div class="carousel-item active ">
+                <img src=${imagenes.imagen} class="object-contain w-full h-[40vw]" alt=${imagenes.tituloImagen}}>
+              </div>`)
+                }
+            else{
+                return(
+                    `<div class="carousel-item ">
+                <img src=${imagenes.imagen} class="object-contain w-full h-[40vw]" alt=${imagenes.tituloImagen}}>
+              </div>`
+                )
+            }
+            }
+    )
+    
+  </script>

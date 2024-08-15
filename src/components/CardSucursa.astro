@@ -1,0 +1,23 @@
+---
+const {colorPrincipal,colorSecundario,imagenFondo, TituloImagen,sucursal}=Astro.props
+---
+<a
+      class=`bg-gradient-to-r to-${colorPrincipal} from-${colorSecundario} relative w-[95%] md:w-[800px] md:h-[49vh] rounded-xl flex justify-center items-center p-6`
+      href="/Sucursales"
+    >
+      <div class="z-10">
+        <h2 class="text-3xl md:text-5xl text-white">
+          <strong>Rey de Reyes </strong>{sucursal}
+        </h2>
+      </div>
+      <button
+        class="bg-orange-500 text-lg md:text-3xl font-bold text-white p-3 w-[95%] absolute bottom-5 z-20 rounded-xl shadow-md hover:bg-red-600 transition-all duration-75"
+      >
+        Ver Más
+      </button>
+      <img
+        class="w-full h-full absolute z-0 object-cover opacity-35"
+        src=`${imagenFondo}`
+        alt=`${TituloImagen}`
+      />
+    </a>

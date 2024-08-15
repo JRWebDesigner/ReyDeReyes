@@ -1,26 +1,25 @@
 ---
 import Logo from './Logo.astro'
 ---
-<header class="relative w-full h-20 sm:h-28 md:h-32 lg:h-36 px-[10vw] py-2 bg-gradient-to-l to-blue-900 from-gray-800 flex justify-center z-50 md:justify-around items-center">
+<header class="relative w-full h-20 sm:h-28 md:h-32 lg:h-36 px-[10vw] py-2 bg-gradient-to-l to-orange-600 from-gray-800 flex justify-center z-50 md:justify-around items-center">
     <Logo />
-    <nav class="hidden md:block">
+    <nav class="hidden lg:block">
         <ul class="flex gap-20 text-3xl items-center justify-center">
             <li><a href="/">Inicio</a></li>
             <li><a href="/Sucursales">Sucursales</a></li>
             <li><a href="/Carreras">Carreras</a></li>
             <li><a href="/Noticias">Noticias</a></li>
-
         </ul>
     </nav>
     <button
         title="menu Rey de Reyes"
         name="button"
-        class="z-30 md:hidden mt-1 absolute right-7"
+        class="z-30 lg:hidden mt-1 absolute right-7"
     >
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="55"
-            height="55"
+            width="35"
+            height="35"
             viewBox="0 0 24 24"
             fill="none"
             stroke="#fff"
@@ -34,38 +33,49 @@ import Logo from './Logo.astro'
         >
     </button>
     <nav
-        class="nav-mobile p-4 absolute right-1 rounded-b-lg min-w-[60vw] bg-blue-900 h-[60vh] z-50"
+        class="nav-mobile p-4 absolute right-1 rounded-b-lg min-w-[40vw] bg-orange-600 h-[60vh] z-50 rounded-bl-3xl"
     >
-        <ul class="grid place-items-center gap-10 text-[#831a1a] z-50">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/Sucursales">Sucursales</a></li>
-            <li><a href="/Carreras">Carreras</a></li>
-            <li><a href="/Noticias">Noticias</a></li>
+        <ul class="w-full h-full flex flex-col justify-center items-center gap-10 text-lg z-50">
+            <li><a class="text-white no-underline text-center text-lg" href="/">Inicio</a></li>
+            <li><a class="text-white no-underline text-lg" href="/Sucursales">Sucursales</a></li>
+            <li><a class="text-white no-underline text-lg" href="/Carreras">Carreras</a></li>
+            <li><a class="text-white no-underline text-lg" href="/Noticias">Noticias</a></li>
         </ul>
     </nav>
 </header>
 <style>
+    header{
+        width: 100vw !important;
+    }
     li{
         font-size: 2rem;
         font-weight: 900; 
-        color:rgb(255, 255, 255);
+        color:#ffffff !important;
+        text-decoration-style: none;
     }
     li:hover{
         color:rgb(255, 123, 0);
     }
     .nav-mobile {
+        z-index: 40;
         top: -1000%;
         transform: scaleY(0);
         opacity: 0;
+        display: hidden;
         transition:
             1s top,
             1s transform,
-            1.3s opacity;
+            1.3s opacity,
+            1.3s display;
         z-index: 0 !important;
     }
     button:hover ~ .nav-mobile {
         top: 100%;
         opacity: 100;
         transform: scaleY(100%);
+        display: block;
+    }
+    .nav-movile{
+        color:#831a1a !important;
     }
 </style>
