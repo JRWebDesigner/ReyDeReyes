@@ -4,144 +4,74 @@ import Present from "../components/Present.astro";
 import ListaSucursales from '../components/ListaSucursales.astro'
 import GaleriaFotos from "../components/Carreras.astro";
 import GaleriaPrincipal from "../components/CarruselesFotos/GaleriaPrincipal.astro";
+import ListNoticias from "../components/ListNoticias.astro";
 ---
 
 <Layout title="Rey de Reyes | Instituro academico ">
-  <div class="w-full md:h-[50vh]">
+  <div class="w-full lg:h-[50vh]">
     <Present />
   </div>
   <div class="flex items-center justify-center mt-20">
-    <h1 class="text-blue-950 text-center z-10 md:text-8xl text-3xl">
+    <h1 class="text-blue-950 text-center z-10 lg:text-8xl text-3xl">
       REY DE REYES <br />
       <small>Excelencia en Educación</small>
-    </h1>
+     </h1>
   </div>
 
   <div
-    class="md:my-10 text-3xl flex-col font-semibold flex items-center text-center h-[30vh] bg-white px-[2vw] md:px-[10vw]"
+   class="my-10 text-3xl flex-col font-semibold flex items-center text-center bg-white p-7 lg:p-14"
   >
-    <p class="text-sm md:text-3xl">
+    <p class="text-sm lg:text-3xl">
       ¡Estudia con nosotros! Somos el mejor centro de estudios y cursos en la ciudad
       ¡te esperamos🙂!
     </p>
   </div>
-
-  <h2 class="subtitle text-center text-2xl md:text-6xl font-bold">
+<div class="my-10 w-auto h-auto">
+  <h2 class="subtitle text-center text-2xl lg:text-6xl font-bold">
     NUESTRAS CARRERAS
   </h2>
   <div
-    class="mb-10 relative w-full min-h-[40vh] bg-gray-200 p-6 flex justify-center items-center"
+    class="mb-10 relative w-full  bg-gray-200 p-6 flex justify-center items-center"
   >
   <GaleriaFotos/>
-    
   </div>
-  <h2 class="subtitle text-center md:my-10 md:mt-20 text-2xl md:text-6xl font-bold">
+</div>
+<div
+   class="lg:my-36 text-3xl flex-col font-semibold flex items-center text-center bg-white px-[2vw] lg:px-[10vw]"
+   >
+   <p class="text-sm lg:text-3xl">
+    Creemos que cada individuo es un pilar fundamental en la construcción de una nación más fuerte y próspera. Por eso en Rey de Reyes atravez de la educación, la responsabilidad social y el trabajo conjunto,<strong> buscamos crear oportunidades que impulsen el desarrollo y el bienestar de todos los bolivianos</strong>, enriqueciendo nuestro país con <strong>
+      innovación y dedicación
+    </strong>.
+   </p>
+   <br>
+   <p class="text-sm lg:text-3xl">
+    ¡Unidos, construimos el futuro que merecemos! Con <strong>esfuerzo y perseverancia</strong>. Trabajemos juntos para forjar un camino de libertad y crecimiento para las futuras generaciones. Que nuestro amor por la patria sea el motor que nos impulse hacia un horizonte de prosperidad y grandeza
+   </p>
+</div>
+<div class="my-10">
+  <h2 class="subtitle text-center text-2xl lg:text-6xl font-bold">
     NUESTRAS SUCURSALES
   </h2>
   <ListaSucursales />
-  <h2 class="subtitle text-center md:my-10 md:mt-20 text-2xl md:text-6xl font-bold">
+</div>
+  <h2 class="subtitle text-center lg:my-10 lg:mt-20 text-2xl lg:text-6xl font-bold">
     GALERIA DE FOTOS
   </h2>
   <div class="w-full h-[40vw] grid place-items-center m-auto bg-gray-100">
     <GaleriaPrincipal />
   </div>
   
-  <h2 class="subtitle text-center md:my-10 md:mt-20 text-2xl md:text-6xl font-bold">
+  <h2 class="subtitle text-center lg:my-10 lg:mt-20 text-2xl lg:text-6xl font-bold">
     NOTICIAS
   </h2>
-  <div class="flex justify-around flex-wrap md:flex-nowrap">
-    <div class="card">
-      <div class="card-image"></div>
-      <div class="category">Noticia nro 1</div>
-      <div class="heading">A heading that must span over two lines</div>
-    </div>
-    <div class="card">
-      <div class="card-image"></div>
-      <div class="category">Noticia nro 1</div>
-      <div class="heading">A heading that must span over two lines</div>
-    </div>
-    <div class="card">
-      <div class="card-image"></div>
-      <div class="category">Noticia nro 1</div>
-      <div class="heading">A heading that must span over two lines</div>
-    </div>
-  </div>
+  <ListNoticias />
 </Layout>
 <style>
   h3 {
     font-weight: 700;
   }
-  .card {
-    width: 500px;
-    height: 250px;
-    margin: 20px;
-    background: #eee;
-    padding: 0.4em;
-    transition: 1s all;
-    border-radius: 6px;
-  }
-  .card:hover {
-    background-color: rgb(255, 189, 91);
-  }
-
-  .card-image {
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 180px;
-    border-radius: 6px 6px 0 0;
-  }
-
-  .card-image:hover {
-    transform: scale(0.98);
-  }
-
-  .category {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: rgb(63, 121, 230);
-    padding: 10px 7px 0;
-  }
-
-  .category:hover {
-    cursor: pointer;
-  }
-
-  .heading {
-    font-weight: 600;
-    color: rgb(88, 87, 87);
-    padding: 7px;
-    font-size: 1rem;
-  }
-
-  .heading:hover {
-    cursor: pointer;
-  }
-
-  .name {
-    font-weight: 600;
-  }
-
-  .name:hover {
-    cursor: pointer;
-  }
-  @media (min-width: 768px) {
-    .card {
-    width: 800px;
-    height: 550px;
-  }
-  .card-image {
-    height: 380px;
-  }
-
-.category {
-    font-size: 1.9rem;
-  }
- .heading {
-    font-size: 1.5rem;
-  }
-
-}
+  
   .save:hover .svg {
     fill: #ced8de;
   }
