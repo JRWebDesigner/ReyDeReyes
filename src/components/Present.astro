@@ -1,46 +1,35 @@
-<div id="carouselExampleSlidesOnly" class="carousel slide relative h-full w-full" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active w-full md:h-[50vh]">
-        <img class="object-cover w-full h-full" src="https://www.educaciontrespuntocero.com/wp-content/uploads/2022/09/beneficios-estudiantes-min.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item w-full md:h-[50vh]">
-        <img class="object-cover w-full h-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMMWC3hUiNYOW2oW0813XtSk15xYeBgEypYA&s" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item w-full md:h-[50vh]">
-        <img class="object-cover w-full h-full" src="https://www.educaciontrespuntocero.com/wp-content/uploads/2022/09/beneficios-estudiantes-min.jpg" class="d-block w-100" alt="...">
-      </div>
-    </div>
-  </div>
+<div
+    id="carruselPresent"
+    class="carousel slide relative h-full w-full"
+    data-bs-ride="carousel"
+>
+    <div id="loadImages2" class="carousel-inner"></div>
+</div>
 <style>
-    .container_animation{
-        animation:1s aparecer;
+    .container_animation {
+        animation: 1s aparecer;
     }
     @keyframes aparecer {
-        0%{
+        0% {
             opacity: 0;
         }
-        100%{
+        100% {
             opacity: 0.2;
         }
     }
 </style>
-<!--<script>
-    import ImagesJSON from './images.json';
-    let i=0;
-    const images=document.getElementById('present');
-    console.log(ImagesJSON.length)
-    setInterval(()=>{
-        if(i===(ImagesJSON.length)) {
-            i=0
+<script>
+    import CarruselPresentacion from "./CarruselPresentacion.json";
+    const loadImages = document.getElementById("loadImages2");
+    loadImages.innerHTML = CarruselPresentacion.map((imagenes) => {
+        if (CarruselPresentacion[0].imagen === imagenes.imagen) {
+            return `<div class="carousel-item active w-full md:h-[50vh]">
+        <img class="object-cover w-full h-full" src=${imagenes.imagen} class="d-block w-100" alt=${imagenes.tituloImagen}>
+      </div>`;
+        } else {
+            return `<div class="carousel-item w-full md:h-[50vh]">
+        <img class="object-cover w-full h-full" src=${imagenes.imagen} class="d-block w-100" alt=${imagenes.tituloImagen}>
+        </div>`;
         }
-        if(images.classList.contains('container_animation')){
-            images.classList.remove('container_animation')
-        }
-        else{
-            images.classList.add('container_animation')
-        }
-        images.attributes[2].value=ImagesJSON[i].url
-        i++
-    },2500)
-
-</script> -->
+    }).join("");
+</script>
