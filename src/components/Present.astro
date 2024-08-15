@@ -1,33 +1,29 @@
-<div
-    id="carruselPresent"
-    class="carousel slide relative h-full w-full"
-    data-bs-ride="carousel"
->
-    <div id="loadImages2" class="carousel-inner"></div>
+---
+import Titulo from "./Titulo.astro"
+---
+<div class="bg-black relative bg-opacity-5">
+    <div class="absolute z-40 bottom-2 left-6 md:bottom-[3%] md:left-12 flex justify-center items-center">
+        <Titulo />
+    </div>
+    <div
+        id="carruselPresent"
+        class="carousel slide z-30 opacity-25 h-full w-full"
+        data-bs-ride="carousel"
+    >
+        <div id="loadImages2" class="carousel-inner"></div>
+    </div>
 </div>
-<style>
-    .container_animation {
-        animation: 1s aparecer;
-    }
-    @keyframes aparecer {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 0.2;
-        }
-    }
-</style>
+
 <script>
     import CarruselPresentacion from "./CarruselPresentacion.json";
     const loadImages = document.getElementById("loadImages2");
     loadImages.innerHTML = CarruselPresentacion.map((imagenes) => {
         if (CarruselPresentacion[0].imagen === imagenes.imagen) {
-            return `<div class="carousel-item active w-full md:h-[50vh]">
+            return `<div class="carousel-item active w-full md:h-[80vh]">
         <img class="object-cover w-full h-full" src=${imagenes.imagen} class="d-block w-100" alt=${imagenes.tituloImagen}>
       </div>`;
         } else {
-            return `<div class="carousel-item w-full md:h-[50vh]">
+            return `<div class="carousel-item w-full md:h-[80vh]">
         <img class="object-cover w-full h-full" src=${imagenes.imagen} class="d-block w-100" alt=${imagenes.tituloImagen}>
         </div>`;
         }
