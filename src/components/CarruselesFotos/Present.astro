@@ -19,11 +19,11 @@ import Titulo from "../Titulo.astro"
     const loadImages = document.getElementById("loadImages2");
     loadImages.innerHTML = CarruselPresentacion.map((imagenes) => {
         if (CarruselPresentacion[0].imagen === imagenes.imagen) {
-            return `<div class="carousel-item active w-full h-[70vh]">
+            return `<div class="carousel-item items active w-full h-[70vh]">
         <img class="object-cover w-full h-full" src=${imagenes.imagen} class="d-block w-100" alt=${imagenes.tituloImagen}>
       </div>`;
         } else {
-            return `<div class="carousel-item w-full h-[70vh]">
+            return `<div class="carousel-item items w-full h-[70vh]">
         <img class="object-cover w-full h-full" src=${imagenes.imagen} class="d-block w-100" alt=${imagenes.tituloImagen}>
         </div>`;
         }
