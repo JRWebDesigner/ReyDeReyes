@@ -5,7 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 import Whatsapp from '../components/whatsapp.astro'
-import Header from '../components/Header.astro';
+import Header from '../components/HeaderComponents/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
@@ -55,9 +55,14 @@ import Footer from '../components/Footer.astro';
 	body,html{
 		background-color: #ffffff;
 	}
-	h1,strong{
+	h1{
 		font-family:"mont",'Times New Roman', Times, serif;
 		color:#020236;
+	}
+	strong{
+		font-family:"montserrat";
+		color:#00002b;
+
 	}
 	.subtitle{
 		font-family:"montserrat";
@@ -67,4 +72,12 @@ import Footer from '../components/Footer.astro';
 		margin:10px;
 		font-family: 'poppins';
 	}
+	p{
+		font-size: 1.2rem;
+	}
+	@media (min-width: 768px) {
+    p {
+		font-size: 1.5rem;
+    }
+}
 </style>

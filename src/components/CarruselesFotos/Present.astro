@@ -1,5 +1,5 @@
 ---
-import Titulo from "./Titulo.astro"
+import Titulo from "../Titulo.astro"
 ---
 <div class="bg-black relative bg-opacity-5">
     <div class="absolute z-40 bottom-2 left-6 md:bottom-[3%] md:left-12 flex justify-center items-center">
@@ -15,15 +15,15 @@ import Titulo from "./Titulo.astro"
 </div>
 
 <script>
-    import CarruselPresentacion from "./CarruselPresentacion.json";
+    import CarruselPresentacion from "../CarruselPresentacion.json";
     const loadImages = document.getElementById("loadImages2");
     loadImages.innerHTML = CarruselPresentacion.map((imagenes) => {
         if (CarruselPresentacion[0].imagen === imagenes.imagen) {
-            return `<div class="carousel-item active w-full md:h-[80vh]">
+            return `<div class="carousel-item active w-full h-[70vh]">
         <img class="object-cover w-full h-full" src=${imagenes.imagen} class="d-block w-100" alt=${imagenes.tituloImagen}>
       </div>`;
         } else {
-            return `<div class="carousel-item w-full md:h-[80vh]">
+            return `<div class="carousel-item w-full h-[70vh]">
         <img class="object-cover w-full h-full" src=${imagenes.imagen} class="d-block w-100" alt=${imagenes.tituloImagen}>
         </div>`;
         }

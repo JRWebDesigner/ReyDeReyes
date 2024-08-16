@@ -1,4 +1,4 @@
-<div id="galeriaPrincipal" class="carousel slide w-full h-[40vw]">
+<div id="galeriaPrincipal" class="carousel slide w-full h-[40vh] lg:h-[30vw]">
     <div id="loadImages" class="carousel-inner">
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#galeriaPrincipal" data-bs-slide="prev">
@@ -19,13 +19,13 @@ console.log(
     loadImages.innerHTML=ImagesPrincipalJSON.map((imagenes)=>{
             if(ImagesPrincipalJSON[0].imagen === imagenes.imagen){
                 return( `<div class="carousel-item active ">
-                <img src=${imagenes.imagen} class="object-contain w-full h-[40vw]" alt=${imagenes.tituloImagen}}>
+                <img src=${imagenes.imagen} class="object-contain w-full h-[40vh] lg:h-[30vw]" alt=${imagenes.tituloImagen}}>
               </div>`)
                 }
             else{
                 return(
                     `<div class="carousel-item ">
-                <img src=${imagenes.imagen} class="object-contain w-full h-[40vw]" alt=${imagenes.tituloImagen}}>
+                <img src=${imagenes.imagen} class="object-contain w-full h-[40vh] lg:h-[30vw]" alt=${imagenes.tituloImagen}}>
               </div>`
                 )
             }
