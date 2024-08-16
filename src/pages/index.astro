@@ -33,13 +33,13 @@ import Titulo from '../components/Titulo.astro'
 <div
    class="lg:my-36 flex-col font-semibold flex items-center text-center bg-white px-[2vw] lg:px-[10vw]"
    >
-   <p class="text-[1rem] md:text-lg xl:text-2xl 2xl:text-4xl">
+   <p class="p-Animation -translate-x-[50%] opacity-45 text-[1rem] md:text-lg xl:text-2xl 2xl:text-4xl">
     Creemos que cada individuo es un pilar fundamental en la construcción de una nación más fuerte y próspera. Por eso en Rey de Reyes atravez de la educación, la responsabilidad social y el trabajo conjunto,<strong> buscamos crear oportunidades que impulsen el desarrollo y el bienestar de todos los bolivianos</strong>, enriqueciendo nuestro país con <strong>
       innovación y dedicación
     </strong>.
    </p>
    <br>
-   <p class="text-[1rem] md:text-lg xl:text-2xl 2xl:text-4xl">
+   <p class="p-Animation translate-x-[50%] opacity-45 text-[1rem] md:text-lg xl:text-2xl 2xl:text-4xl">
     ¡Unidos, construimos el futuro que merecemos! Con <strong>esfuerzo y perseverancia</strong>. Trabajemos juntos para forjar un camino de libertad y crecimiento para las futuras generaciones. Que nuestro amor por la patria sea el motor que nos impulse hacia un horizonte de prosperidad y grandeza
    </p>
 </div>
@@ -67,8 +67,36 @@ import Titulo from '../components/Titulo.astro'
   h3 {
     font-weight: 700;
   }
-  
+  .p-Animation{
+    transition: 1s all;
+  }
   .save:hover .svg {
     fill: #ced8de;
   }
 </style>
+<script>
+  const parrafos= document.querySelectorAll('.p-Animation')
+  const options={
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  }
+  function AnimacionParrafos(entrys,obserber){
+    entrys.forEach(entry => {
+      if(entry.isIntersecting){
+        if(entry.target.classList.contains('translate-x-[50%]')){
+          entry.target.classList.remove('translate-x-[50%]')
+          entry.target.classList.remove('opacity-45')
+        }
+        if(entry.target.classList.contains('-translate-x-[50%]')){
+          entry.target.classList.remove('-translate-x-[50%]')
+          entry.target.classList.remove('opacity-45')
+        }
+      }
+    });
+  }
+  let entryParrafo=new IntersectionObserver(AnimacionParrafos,options)
+  parrafos.forEach(parrafo=>{
+    entryParrafo.observe(parrafo)
+  })
+</script>

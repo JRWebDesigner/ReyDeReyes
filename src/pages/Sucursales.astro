@@ -9,8 +9,8 @@ import CardSucursal from "../components/CardSucursal.astro";
     titulo="Nuestras Sucursales"
     imagen="https://eresmama.com/wp-content/uploads/2019/10/estudiantes-adolescentes-motivacion.jpg"
   />
-  <div class="px-[10%] py-[2%] bg-orange-50">
-    <h2 class="subtitle text-4xl font-medium">Conóce Nuestras Sucursales</h2>
+  <div class="px-[10%] py-[2%] bg-orange-100">
+    <h2 class="subtitle text-4xl md:text-6xl font-medium">Conóce Nuestras Sucursales</h2>
     <CardSucursal 
       sucursal="La Paz"
       route="LaPaz"
@@ -29,3 +29,27 @@ import CardSucursal from "../components/CardSucursal.astro";
     />
   </div>
 </Layout>
+<script>
+  const cardEfect = document.querySelectorAll('.cardEfect')
+  let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+}
+function loadCard(entry, observer) {
+  entry.forEach((entrada) => {
+    if (entrada.isIntersecting) {
+      if (entrada.target.classList.contains("opacity-10")) {
+					entrada.target.classList.replace(
+						"opacity-10",
+						"opacity-100",
+					);
+			}
+    }
+  });
+};
+let observer = new IntersectionObserver(loadCard,options);
+cardEfect.forEach(card=>{
+  observer.observe(card)
+})
+</script>
