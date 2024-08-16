@@ -1,26 +1,26 @@
 <div
-    class="flex flex-wrap justify-center mb-10 bg-gradient-to-l to-orange-600 from-yellow-400  p-6 gap-7"
+    class="Sucursal flex flex-wrap justify-center mb-10 bg-gradient-to-l to-orange-600 from-yellow-400  p-6 gap-7"
   >
     <a
-      class="Sucursal shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
+      class="Sucursales scale-75 shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
       href="/Sucursales/LaPaz"
     >
       <img class="w-full h-full" src="/sedeLaPaz.jpeg" alt="">
     </a>
     <a
-      class="Sucursal shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
+      class="Sucursales scale-75 shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
       href="/Sucursales/LaPaz"
     >
       <img class="w-full h-full" src="/sedeLaPaz.jpeg" alt="">
     </a>
     <a
-      class="Sucursal shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
+      class="Sucursales scale-75 shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
       href="/Sucursales/LaPaz"
     >
       <img class="w-full h-full" src="/sedeLaPaz.jpeg" alt="">
     </a>
     <a
-      class="Sucursal shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
+      class="Sucursales scale-75 shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
       href="/Sucursales/LaPaz"
     >
       <img class="w-full" src="/sedeLaPaz.jpeg" alt="">
@@ -28,6 +28,9 @@
     
   </div>
   <style>
+    .Sucursales{
+      transition: .7s all;
+    }
     button{
       background:linear-gradient(to right, rgb(255, 81, 0), rgb(248, 224, 6));
       transition: 1.4s background !important;
@@ -40,3 +43,25 @@
         color: rgb(229 231 235);
     }
   </style>
+  <script>
+    const ListaSucursales = document.querySelectorAll('.Sucursales')
+    const options={
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  }
+    function escalarSucursal(entrys,observe){
+    entrys.forEach(entry => {
+      if(entry.isIntersecting){
+          if(entry.target.classList.contains('scale-75')){
+            entry.target.classList.remove('scale-75')
+          
+          }
+        }
+    });
+  }
+let obserberSucursal = new IntersectionObserver(escalarSucursal, options)
+  ListaSucursales.forEach(sucursal=>{
+    obserberSucursal.observe(sucursal)
+  })
+  </script>
