@@ -15,7 +15,7 @@ import Titulo from '../components/Titulo.astro'
   <div
    class="my-10 flex-col font-semibold flex items-center text-center bg-white p-7 lg:p-14"
   >
-    <p class="text-[1rem] md:text-lg xl:text-2xl 2xl:text-4xl">
+    <p class="presentacion scale-75 text-[1rem] md:text-lg xl:text-2xl 2xl:text-4xl">
       ¡Estudia con nosotros! Somos el mejor centro de estudios y cursos en la ciudad
       ¡te esperamos🙂!
     </p>
@@ -67,6 +67,9 @@ import Titulo from '../components/Titulo.astro'
   h3 {
     font-weight: 700;
   }
+  p{
+    transition: 1s all;
+  }
   .p-Animation{
     transition: 1s all;
   }
@@ -76,6 +79,7 @@ import Titulo from '../components/Titulo.astro'
 </style>
 <script>
   const parrafos= document.querySelectorAll('.p-Animation')
+  const presentacion = document.querySelector('.presentacion')
   const options={
     root: null,
     rootMargin: "0px",
@@ -95,8 +99,20 @@ import Titulo from '../components/Titulo.astro'
       }
     });
   }
+  function PresentacionAnimation(entrys,observe){
+    entrys.forEach(entry => {
+      if(entry.isIntersecting){
+          if(entry.target.classList.contains('scale-75')){
+            entry.target.classList.remove('scale-75')
+          
+          }
+        }
+    });
+  }
   let entryParrafo=new IntersectionObserver(AnimacionParrafos,options)
   parrafos.forEach(parrafo=>{
     entryParrafo.observe(parrafo)
   })
+  let obserberPresent = new IntersectionObserver(PresentacionAnimation, options)
+  obserberPresent.observe(presentacion)
 </script>
