@@ -1,7 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ListaSucursales from "../components/ListaSucursales.astro";
+import BannerInicio from "../components/BannerInicio.astro";
+import CardSucursal from "../components/CardSucursal.astro";
 ---
+
 <Layout title="Rey de Reyes | Todas nuestras sucursales en Bolivia">
-  <ListaSucursales />
+  <BannerInicio
+    titulo="Nuestras Sucursales"
+    imagen="https://eresmama.com/wp-content/uploads/2019/10/estudiantes-adolescentes-motivacion.jpg"
+  />
+  <div class="px-[10%] py-[2%] bg-orange-50">
+    <h2 class="subtitle text-4xl font-medium">Conóce Nuestras Sucursales</h2>
+    <CardSucursal 
+      sucursal="La Paz"
+      route="LaPaz"
+    />
+    <CardSucursal 
+      sucursal="El Alto"
+      route="ElAlto"
+    />
+    <CardSucursal 
+      sucursal="Cochabamba"
+      route="Cochabamba"
+    />
+    <CardSucursal 
+      sucursal="Santa Cruz"
+      route="SantaCruz"
+    />
+  </div>
 </Layout>
