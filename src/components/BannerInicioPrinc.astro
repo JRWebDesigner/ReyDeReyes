@@ -1,0 +1,47 @@
+---
+import Titulo from "./Titulo.astro";
+---
+
+<div
+    id="BannerPrinc"
+    class="w-full relative h-[70vh] opacity-10 scale-50 rounded-full xl:[60vh] bg-gradient-to-l to-black to-90% from-blue-800 bg-opacity-5"
+>
+    <!-- <Present /> -->
+    <img
+        class="w-full h-full rounded-full absolute object-cover opacity-25"
+        src="https://www.educaciontrespuntocero.com/wp-content/uploads/2022/09/beneficios-estudiantes-min.jpg"
+        alt="Titulo de ejemplo 1"
+    />
+    <Titulo />
+</div>
+<style>
+    #BannerPrinc{
+        transition: .5s all;
+    }
+    img{
+        transition: 1s all;
+    }
+</style>
+<script>
+    const BannerPrinc = document.getElementById("BannerPrinc");
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+    };
+    function loadPage(entrys, observe){
+        entrys.forEach(entry => {
+            if(entry.isIntersecting)
+            {
+                entry.target.childNodes[3].classList.remove('rounded-full')
+                if(entry.target.classList.contains('opacity-10') && entry.target.classList.contains('scale-50')){
+                    entry.target.classList.remove('opacity-10')
+                    entry.target.classList.remove('scale-50')
+                    entry.target.classList.remove('rounded-full')
+                }
+            }
+        });
+    }
+    const observerPresent=new IntersectionObserver(loadPage, options)
+    observerPresent.observe(BannerPrinc);
+</script>

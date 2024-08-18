@@ -50,7 +50,6 @@
 <script>
   import ImagesPrincipalJSON from "./ImagesPrincipalJSON.json";
   const loadImages = document.getElementById("loadImages");
-  console.log(ImagesPrincipalJSON[0].imagen);
   loadImages.innerHTML = ImagesPrincipalJSON.map((imagenes) => {
     if (ImagesPrincipalJSON[0].imagen === imagenes.imagen) {
       return `<div class="carousel-item active ">
