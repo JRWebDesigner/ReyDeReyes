@@ -15,7 +15,7 @@ import Titulo from "../Titulo.astro"
 </div>
 
 <script>
-    import CarruselPresentacion from "../CarruselPresentacion.json";
+    import CarruselPresentacion from "../EditarImagenesNoticias/CarruselPresentacion.json";
     const loadImages = document.getElementById("loadImages2");
     loadImages.innerHTML = CarruselPresentacion.map((imagenes) => {
         if (CarruselPresentacion[0].imagen === imagenes.imagen) {
