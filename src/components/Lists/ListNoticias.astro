@@ -1,28 +1,38 @@
+---
+import NoticiasJSON from '../EditarImagenesNoticias/NoticiasJSON.json'
+---
 <div class="my-20 md:my-36 grid place-items-center">
   <h2 class="subtitle text-center text-2xl lg:text-5xl font-bold">NOTICIAS</h2>
   <div class="flex justify-center flex-wrap md:flex-nowrap w-full">
-    <div class="card">
-      <div class="card-image"></div>
-      <div class="category">Noticia nro 1</div>
-      <div class="heading">A heading that must span over two lines</div>
-    </div>
-    <div class="card">
-      <div class="card-image"></div>
-      <div class="category">Noticia nro 1</div>
-      <div class="heading">A heading that must span over two lines</div>
-    </div>
-    <div class="card">
-      <div class="card-image"></div>
-      <div class="category">Noticia nro 1</div>
-      <div class="heading">A heading that must span over two lines</div>
-    </div>
+    <a href="/Noticias#1" class="card">
+      <div class="card-image">
+        <img class="object-cover" src=`${NoticiasJSON[0].imagen}` alt=`${NoticiasJSON[0].titulo}`>
+      </div>
+      <div class="category">{NoticiasJSON[0].titulo}</div>
+      <div class="heading">{NoticiasJSON[0].descripcion}</div>
+    </a>
+    <a href="/Noticias#2" class="card">
+      <div class="card-image">
+        <img class="object-cover" src=`${NoticiasJSON[1].imagen}` alt=`${NoticiasJSON[1].titulo}`>
+      </div>
+      <div class="category">{NoticiasJSON[1].titulo}</div>
+      <div class="heading">{NoticiasJSON[1].descripcion}</div>
+    </a>
+    <a href="/Noticias#3" class="card">
+      <div class="card-image">
+        <img class="object-cover" src=`${NoticiasJSON[2].imagen}` alt=`${NoticiasJSON[2].titulo}`>
+      </div>
+      <div class="category">{NoticiasJSON[2].titulo}</div>
+      <div class="heading">{NoticiasJSON[2].descripcion}</div>
+    </a>
   </div>
   <button class="mt-12 bg-orange-500 text-white text-3xl font-bold w-[90%] md:w-[30%] rounded-xl hover:scale-[1.1] transition-all" ><a class="block text-sm md:text-lg" href="/Noticias">Ver Más</a></button>
 </div>
 <style>
   .card {
+    overflow: hidden;
     width: 270px;
-    height: 250px;
+    height: 300px;
     margin: 20px;
     background: #eee;
     padding: 0.4em;
@@ -33,8 +43,7 @@
     background-color: rgb(255, 189, 91);
   }
 
-  .card-image {
-    background-color: rgb(255, 255, 255);
+  .card-image, img {
     width: 100%;
     height: 180px;
     border-radius: 6px 6px 0 0;
@@ -77,16 +86,16 @@
   @media (min-width: 768px) {
     .card {
       width: 30%;
-      height: 35vh;
+      height: 45vh;
     }
-    .card-image {
-      height: 380px;
+    .card-image, img{
+      height: 30vh;
     }
     .category {
-      font-size: 1.9rem;
+      font-size: 4vh;
     }
     .heading {
-      font-size: 1.5rem;
+      font-size: 2vh;
     }
   }
 </style>
