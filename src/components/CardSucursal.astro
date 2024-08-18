@@ -8,7 +8,7 @@ const {sucursal,route} = Astro.props
       alt=`Sucursal de ${sucursal} | Rey de Reyes`
     />
     <div class="flex flex-col justify-center">
-      <h3 class="text-[1.4rem] md:text-3xl 2xl:text-5xl font-semibold">
+      <h3 class="text-[1.4rem] md:text-3xl 2xl:text-4xl font-semibold">
         Sucursal de {sucursal} | Rey de Reyes
       </h3>
       <div class="text-4xl flex flex-col">
@@ -31,5 +31,20 @@ const {sucursal,route} = Astro.props
   <style>
     .cardEfect{
       transition: 1s opacity;
+    }
+    button:hover{
+      transform: scale(1.1);
+      animation: infinite 2s ease-in-out infiniteColor;
+    }
+    @keyframes infiniteColor {
+      0%{
+        background-color: rgb(231, 160, 5);
+      }
+      50%{
+        background-color: rgb(31, 1, 143);
+      }    
+      100%{
+        background-color: rgb(231, 160, 5);
+      }
     }
   </style>

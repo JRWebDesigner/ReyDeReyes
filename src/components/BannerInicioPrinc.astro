@@ -4,11 +4,11 @@ import Titulo from "./Titulo.astro";
 
 <div
     id="BannerPrinc"
-    class="w-full relative h-[70vh] opacity-10 scale-50 rounded-full xl:[60vh] bg-gradient-to-l to-black to-90% from-blue-800 bg-opacity-5"
+    class="w-full relative h-[70vh] opacity-10 scale-90 xl:[60vh] bg-gradient-to-l to-black to-90% from-blue-800 bg-opacity-5"
 >
     <!-- <Present /> -->
     <img
-        class="w-full h-full rounded-full absolute object-cover opacity-25"
+        class="w-full h-full absolute object-cover opacity-25"
         src="https://www.educaciontrespuntocero.com/wp-content/uploads/2022/09/beneficios-estudiantes-min.jpg"
         alt="Titulo de ejemplo 1"
     />
@@ -33,11 +33,9 @@ import Titulo from "./Titulo.astro";
         entrys.forEach(entry => {
             if(entry.isIntersecting)
             {
-                entry.target.childNodes[3].classList.remove('rounded-full')
-                if(entry.target.classList.contains('opacity-10') && entry.target.classList.contains('scale-50')){
+                if(entry.target.classList.contains('opacity-10') && entry.target.classList.contains('scale-90')){
                     entry.target.classList.remove('opacity-10')
-                    entry.target.classList.remove('scale-50')
-                    entry.target.classList.remove('rounded-full')
+                    entry.target.classList.remove('scale-90')
                 }
             }
         });

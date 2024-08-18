@@ -1,4 +1,6 @@
-<div class="flex justify-around flex-wrap md:flex-nowrap">
+<div class="my-20 md:my-36 grid place-items-center">
+  <h2 class="subtitle text-center text-2xl lg:text-5xl font-bold">NOTICIAS</h2>
+  <div class="flex justify-center flex-wrap md:flex-nowrap w-full">
     <div class="card">
       <div class="card-image"></div>
       <div class="category">Noticia nro 1</div>
@@ -15,8 +17,10 @@
       <div class="heading">A heading that must span over two lines</div>
     </div>
   </div>
-  <style>
-    .card {
+  <button class="mt-12 bg-orange-500 text-white text-3xl font-bold w-[30%] rounded-xl hover:scale-[1.1] transition-all" ><a class="block" href="/Noticias">Ver Más</a></button>
+</div>
+<style>
+  .card {
     width: 500px;
     height: 250px;
     margin: 20px;
@@ -72,19 +76,17 @@
   }
   @media (min-width: 768px) {
     .card {
-    width: 500px;
-    height: 550px;
+      width: 30%;
+      height: 35vh;
+    }
+    .card-image {
+      height: 380px;
+    }
+    .category {
+      font-size: 1.9rem;
+    }
+    .heading {
+      font-size: 1.5rem;
+    }
   }
-  .card-image {
-    height: 380px;
-  }
-
-.category {
-    font-size: 1.9rem;
-  }
- .heading {
-    font-size: 1.5rem;
-  }
-
-}
-  </style>
+</style>

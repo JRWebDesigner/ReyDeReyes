@@ -1,10 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Present from "../components/CarruselesFotos/Present.astro";
-import ListaSucursales from '../components/ListaSucursales.astro'
-import ListCarreras from "../components/ListCarreras.astro";
+import ListaSucursales from '../components/Lists/ListaSucursales.astro'
+import ListCarreras from "../components/Lists/ListCarreras.astro";
 import GaleriaPrincipal from "../components/CarruselesFotos/GaleriaPrincipal.astro";
-import ListNoticias from "../components/ListNoticias.astro";
+import ListNoticias from "../components/Lists/ListNoticias.astro";
 import BannerInicioPrinc from '../components/BannerInicioPrinc.astro'
 ---
 
@@ -41,24 +41,10 @@ import BannerInicioPrinc from '../components/BannerInicioPrinc.astro'
     ¡Unidos, construimos el futuro que merecemos! Con <strong>esfuerzo y perseverancia</strong>. Trabajemos juntos para forjar un camino de libertad y crecimiento para las futuras generaciones. Que nuestro amor por la patria sea el motor que nos impulse hacia un horizonte de prosperidad y grandeza
    </p>
 </div>
-<div class="my-10">
-  <h2 class="subtitle text-center text-2xl lg:text-5xl font-bold">
-    NUESTRAS SUCURSALES
-  </h2>
-  <div>
     <ListaSucursales />
-  </div>
-</div>
-  <h2 class="subtitle text-center text-2xl lg:text-5xl font-bold">
-    GALERIA DE FOTOS
-  </h2>
-  <div class="w-full py-2 grid place-items-center m-auto bg-gray-100">
-    <GaleriaPrincipal />
-  </div>
   
-  <h2 class="subtitle text-center text-2xl lg:text-5xl font-bold">
-    NOTICIAS
-  </h2>
+  <GaleriaPrincipal />
+  
   <ListNoticias />
 </Layout>
 <style>

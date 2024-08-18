@@ -1,5 +1,9 @@
-<div
-    class="Sucursal flex flex-wrap justify-center mb-10 bg-gradient-to-l to-orange-600 from-yellow-400  p-6 gap-7"
+<div class="my-20 md:my-36">
+  <h2 class="subtitle text-center text-2xl lg:text-5xl font-bold">
+    NUESTRAS SUCURSALES
+  </h2>
+  <div
+    class="Sucursal flex flex-wrap items-center justify-center mb-10 bg-gradient-to-l to-orange-600 from-yellow-400 p-6 gap-4 md:gap-12"
   >
     <a
       class="Sucursales scale-75 shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
@@ -20,16 +24,21 @@
       <img class="w-full h-full" src="/sedeLaPaz.jpeg" alt="">
     </a>
     <a
-      class="Sucursales scale-75 shadow-lg w-[80%] md:w-[45%] lg:w-[30vw]"
+      class="Sucursales scale-75 shadow-lg w-[80%] md:w-[45%] lg:w-[30vw] hover:shadow-2xl"
       href="/Sucursales/LaPaz"
     >
       <img class="w-full" src="/sedeLaPaz.jpeg" alt="">
     </a>
     
   </div>
+</div>
+
   <style>
     .Sucursales{
       transition: .7s all;
+    }
+    .Sucursales:hover{
+      transform: scale(1.1);
     }
     button{
       background:linear-gradient(to right, rgb(255, 81, 0), rgb(248, 224, 6));
