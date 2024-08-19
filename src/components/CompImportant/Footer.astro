@@ -1,11 +1,12 @@
 ---
 import Logo from "./Logo.astro";
+import Maps from "../Maps.astro";
 ---
 
 <footer
-    class="w-full flex flex-col sm:grid-cols-2 lg:grid-cols-3 bg-blue-800 p-5 gap-10 text-white "
+    class="w-full justify-center items-center flex flex-col md:flex-row bg-blue-800 p-5 md:p-14 gap-10 md:gap-24 text-white "
 >
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-around items-center">
         <div class="mt-10">
             <h4 class="text-4xl text-center">Siguenos</h4>
             <div class="text-4xl flex flex-col justify-start items-start gap-5">
@@ -60,6 +61,10 @@ import Logo from "./Logo.astro";
         <small class="text-center text-2xl w-full mt-10">
             &#169 Rey de Reyes 2024 
         </small>
+    </div>
+    <div class="h-full flex items-center justify-center flex-col gap-4">
+        <h4 class="text-4xl text-center">Encuentranos en:</h4>
+        <Maps /> 
     </div>
 </footer>
 

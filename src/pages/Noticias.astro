@@ -9,8 +9,10 @@ import Layout from "../layouts/Layout.astro";
         imagen="https://images.theconversation.com/files/503994/original/file-20230111-16-50xlpy.jpg?ixlib=rb-4.1.0&rect=0%2C721%2C4585%2C2289&q=45&auto=format&w=1356&h=668&fit=crop"
     />
 
+   <div class="py-10">
     <div id="Noticias"></div>
-    <div id="loadNoticia" class="m-4"></div>
+    <div id="loadNoticia" class="m-5 md:m-10"></div>
+   </div>
 </Layout>
 <style>
     div {
@@ -26,7 +28,7 @@ import Layout from "../layouts/Layout.astro";
     Noticias.innerHTML = NoticiasJSON.map((noticia) => {
         i++;
         return `
-                <div id="${i}" class="exportNoticia relative mx-auto overflow-hidden p-3 my-3 lg:w-[800px] 2xl:w-[1300px] border-2 rounded-2xl shadow-md hover:bg-gray-200 transition-all w-[90%]">
+                <div id="${i}" class="exportNoticia relative mx-auto overflow-hidden p-3 my-5 lg:w-[800px] 2xl:w-[1300px] border-2 rounded-2xl shadow-md hover:bg-blue-200 transition-all w-[90%]">
                     <img class="object-contain m-auto w-auto h-auto" src="${noticia.imagen}" alt="${noticia.titulo}">
                     <div class="mt-2">
                         <h2 class="text-2xl md:text-4xl 2xl:text-6xl text-blue-950 font-bold">${noticia.titulo}</h2>
@@ -35,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
                           ${noticia.descripcion}
                         </p>
                     </div>
-                    <button class="bg-orange-500 min-w-[20%] text-white rounded-full p-1 hover:scale-[1.1] transition-all absolute right-6 bottom-3">
+                    <button class="bg-orange-500 min-w-[20%] text-white rounded-full p-1 hover:scale-[1.1] transition-all absolute right-6 bottom-3 text-3xl">
                         Leer
                     </button>
                 </div>
@@ -51,21 +53,23 @@ import Layout from "../layouts/Layout.astro";
             Noticias.classList.toggle("hidden");
             let index = parseInt(noticia.attributes[0].value) - 1;
             loadNoticia.innerHTML = `
-            <button id="volver2" class="bg-orange-500 min-w-[10%] text-white rounded-full p-1 hover:scale-[1.1] transition-all">
+            <button id="volver2" class="bg-orange-500 min-w-[10%] text-white rounded-full p-1 hover:scale-[1.1] transition-all text-3xl">
             Volver
         </button>
                 <h2 class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-blue-950 font-semibold text-center">${NoticiasJSON[index].titulo}</h2>
         <img class="bg-blue-300 object-contain m-auto md:h-[70vh] h-[50vh] w-auto" src="${NoticiasJSON[index].imagen}" alt="${NoticiasJSON[index].titulo}">
-        <small>${NoticiasJSON[index].fecha}</small>
-        <p class="text-[1rem]">
+       <div class="mt-5">
+         <small class="md:text-3xl">${NoticiasJSON[index].fecha}</small>
+        <p class="text-[1rem] md:text-3xl">
             ${NoticiasJSON[index].parrafo1}
         </p>
         <br>
-        <p class="text-[1rem]">
+        <p class="text-[1rem] md:text-3xl">
             ${NoticiasJSON[index].parrafo2}
         </p>
+        </div>
         <div class="flex justify-center items-center">
-            <button id="volver" class="bg-orange-500 min-w-[20%] text-white rounded-full p-1 hover:scale-[1.1] transition-all">
+            <button id="volver" class="bg-orange-500 min-w-[20%] text-white rounded-full p-1 hover:scale-[1.1] transition-all text-3xl">
                 Volver
             </button>
         </div>
