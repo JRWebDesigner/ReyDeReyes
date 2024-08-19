@@ -10,7 +10,7 @@ import Layout from "../layouts/Layout.astro";
     />
 
     <div id="Noticias"></div>
-    <div id="loadNoticia" class="m-7"></div>
+    <div id="loadNoticia" class="m-4"></div>
 </Layout>
 <style>
     div {
@@ -27,8 +27,8 @@ import Layout from "../layouts/Layout.astro";
         i++;
         return `
                 <div id="${i}" class="exportNoticia relative mx-auto overflow-hidden p-3 my-3 lg:w-[800px] 2xl:w-[1300px] border-2 rounded-2xl shadow-md hover:bg-gray-200 transition-all w-[90%]">
-                    <img class="object-cover m-auto w-auto h-[300px]" src="${noticia.imagen}" alt="${noticia.titulo}">
-                    <div class="mt-3">
+                    <img class="object-contain m-auto w-auto h-auto" src="${noticia.imagen}" alt="${noticia.titulo}">
+                    <div class="mt-2">
                         <h2 class="text-2xl md:text-4xl 2xl:text-6xl text-blue-950 font-bold">${noticia.titulo}</h2>
                         <small>${noticia.fecha}</small>
                         <p class="text-sm md:text-xl 2xl:text-3xl mb-10 text-gray-600">
@@ -54,8 +54,8 @@ import Layout from "../layouts/Layout.astro";
             <button id="volver2" class="bg-orange-500 min-w-[10%] text-white rounded-full p-1 hover:scale-[1.1] transition-all">
             Volver
         </button>
-                <h2 class="text-[1.3rem] md:text-4xl xl:text-5xl 2xl:text-6xl text-blue-900 font-semibold text-center">${NoticiasJSON[index].titulo}</h2>
-        <img class="object-contain  m-auto h-[70vh] w-auto" src="${NoticiasJSON[index].imagen}" alt="${NoticiasJSON[index].titulo}">
+                <h2 class="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl text-blue-950 font-semibold text-center">${NoticiasJSON[index].titulo}</h2>
+        <img class="bg-blue-300 object-contain m-auto md:h-[70vh] h-[50vh] w-auto" src="${NoticiasJSON[index].imagen}" alt="${NoticiasJSON[index].titulo}">
         <small>${NoticiasJSON[index].fecha}</small>
         <p class="text-[1rem]">
             ${NoticiasJSON[index].parrafo1}
