@@ -8,9 +8,14 @@ import Titulo from "./Titulo.astro";
 >
     <!-- <Present /> -->
     <img
-        class="w-full h-full absolute object-cover opacity-25"
+        class="hidden md:block w-full h-full absolute object-cover opacity-25"
         src="/Home.png"
-        alt="Titulo de ejemplo 1"
+        alt="Portada de inicio"
+    />
+    <img
+        class="md:hidden w-full h-full absolute object-cover opacity-25"
+        src="/HomeMobile.png"
+        alt="Portada de inicio"
     />
     <Titulo />
 </div>

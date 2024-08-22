@@ -23,11 +23,11 @@ import BannerInicioPrinc from "../components/BannerInicioPrinc.astro";
   </div>
 
   <div class="my-10 w-auto h-auto">
-    <h2 class="subtitle text-center text-2xl lg:text-5xl font-bold">
-      NUESTRAS CARRERAS
+    <h2 class="my-7 subtitle -translate-x-[50%] italic text-center text-3xl lg:text-6xl font-black text-[#d94a00]">
+      <span class="font-[Adelia] text-blue-950 text-xl md:text-3xl">Nuestras</span> Carreras 
     </h2>
     <div
-      class="mb-10 relative w-full bg-gray-200 p-6 flex justify-center items-center"
+      class="my-10 relative w-full bg-gray-200 p-6 flex justify-center items-center"
     >
       <ListCarreras />
     </div>
@@ -36,19 +36,6 @@ import BannerInicioPrinc from "../components/BannerInicioPrinc.astro";
   <div
     class="lg:my-36 flex-col font-semibold flex items-center text-center bg-white px-[2vw] lg:px-[10vw] overflow-hidden"
   >
-    <p
-      class="p-Animation -translate-x-[50%] opacity-45 text-[1rem] md:text-lg xl:text-2xl 2xl:text-4xl"
-    >
-      Creemos que cada individuo es un pilar fundamental en la construcción de
-      una nación más fuerte y próspera. Por eso en Rey de Reyes atravez de la
-      educación, la responsabilidad social y el trabajo conjunto,<strong>
-        buscamos crear oportunidades que impulsen el desarrollo y el bienestar
-        de todos los bolivianos</strong
-      >, enriqueciendo nuestro país con <strong>
-        innovación y dedicación
-      </strong>.
-    </p>
-    <br />
     <p
       class="p-Animation translate-x-[50%] opacity-45 text-[1rem] md:text-lg xl:text-2xl 2xl:text-4xl"
     >
@@ -83,11 +70,21 @@ import BannerInicioPrinc from "../components/BannerInicioPrinc.astro";
 <script>
   const parrafos = document.querySelectorAll(".p-Animation");
   const presentacion = document.querySelector(".presentacion");
+  const subtitles = document.querySelectorAll(".subtitle");
   const options = {
     root: null,
     rootMargin: "0px",
     threshold: 0.5,
   };
+  function SubtitleAnimation(entrys,obserber){
+    entrys.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains("-translate-x-[50%]")) {
+          entry.target.classList.remove("-translate-x-[50%]");
+        }
+      }
+    });
+  }
   function AnimacionParrafos(entrys, obserber) {
     entrys.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -120,4 +117,8 @@ import BannerInicioPrinc from "../components/BannerInicioPrinc.astro";
     options,
   );
   obserberPresent.observe(presentacion);
+  let subtitleAnimations=new IntersectionObserver(SubtitleAnimation, options)
+  subtitles.forEach(subtitle => {
+    subtitleAnimations.observe(subtitle)
+  });
 </script>
