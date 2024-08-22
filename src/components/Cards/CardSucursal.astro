@@ -1,12 +1,14 @@
 ---
-const {sucursal,route} = Astro.props
+const {sucursal, sucursalIcon, sucursalImagen, route} = Astro.props
 ---
 <div class="cardEfect my-20 opacity-10 bg-white rounded-2xl h-auto w-full p-2 flex flex-wrap justify-center gap-14">
-    <img
-      class="w-[100%] h-auto md:w-[300px] 2xl:w-[500px] object-contain md:h-[300px]"
-      src="/sedeLaPaz.jpeg"
-      alt=`Sucursal de ${sucursal} | Rey de Reyes`
-    />
+  <a
+      class="relative flex justify-start items-center Sucursales scale-75 w-[80%] md:w-[45%] lg:w-[30vw]"
+      href=`/Sucursales/${route}`
+    >
+      <img class="w-full" src=`/Sucursales/${sucursalImagen}.png` alt=`Sucursal de ${sucursal}`>
+      <img class=`IconSucur absolute w-[40%] left-8 md:left-14` src=`/Sucursales/${sucursalIcon}.png` alt=`Icono de ${sucursal}`>
+    </a>  
     <div class="flex flex-col justify-center">
       <h3 class="text-[1.4rem] md:text-3xl 2xl:text-4xl font-semibold">
         Sucursal de {sucursal} | Rey de Reyes
