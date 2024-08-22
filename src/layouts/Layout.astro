@@ -85,6 +85,7 @@ import Footer from '../components/CompImportant/Footer.astro';
 	}
 	p{
 		font-size: 1.2rem;
+		color:rgb(58, 58, 58);
 	}
 	@media (min-width: 768px) {
     p {
@@ -92,3 +93,24 @@ import Footer from '../components/CompImportant/Footer.astro';
     }
 }
 </style>
+<script>
+	const title = document.querySelectorAll(".title");
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+  function TitleAnimation(entrys,obserber){
+    entrys.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains("-translate-x-[50%]")) {
+          entry.target.classList.remove("-translate-x-[50%]");
+        }
+      }
+    });
+  }
+  let oberverTitle = new IntersectionObserver(TitleAnimation, options)
+  title.forEach(tituo => {
+    oberverTitle.observe(tituo)
+  });
+</script>
