@@ -1,13 +1,20 @@
-<div class="flex items-end justify-center px-6 md:justify-start w-full h-full">
-    <h1 class="text-blue-700 text-center z-10 lg:text-8xl text-[2.7rem] xl:text-[6vw]">
-      REY DE REYES <br />
-      <small class="text-orange-500 text-xl md:text-4xl xl:text-[3vw]">Excelencia en Educación</small>
+<div class="flex items-center justify-center px-14 md:justify-start w-full h-full">
+    <h1 class="text-white text-center italic font-black z-10 lg:text-9xl text-[2.7rem] xl:text-[8vw]">
+      <span class="-ml-[11vw] font-[Adelia] text-[#d94a00] text-[2.4vw]">Alcanza tu</span><br>
+      SUEÑO
      </h1>
 </div>
 <style>
   h1{
-    animation: 10s infinite parpadeo;
+    animation: 2.2s entrada;
     text-shadow: .5px .5px 5px rgb(0, 0, 0);
   }
-  
+  @keyframes entrada {
+    0%{
+      transform: translateX(-500px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
 </style>
