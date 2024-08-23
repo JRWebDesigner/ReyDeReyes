@@ -6,10 +6,9 @@ import Titulo from "./Titulo.astro";
     id="BannerPrinc"
     class="w-full relative h-[70vh] opacity-10 scale-90 xl:[60vh]"
 >
-    <!-- <Present /> -->
     <img
-        class="hidden md:block w-full h-full absolute object-cover"
-        src="/Home.png"
+        class="ImagePort hidden md:block w-full h-full absolute object-cover"
+        src="/Home1.png"
         alt="Portada de inicio"
     />
     <img
@@ -47,4 +46,14 @@ import Titulo from "./Titulo.astro";
     }
     const observerPresent=new IntersectionObserver(loadPage, options)
     observerPresent.observe(BannerPrinc);
+    const ImagePort=document.querySelector('.ImagePort')
+    console.dir(ImagePort)
+    let i=1
+    setInterval(() => {
+        i++
+        ImagePort.attributes[1].nodeValue=`/Home${i}.png`
+        if(i===2){
+            return i=0
+        }
+    }, 3000);
 </script>
