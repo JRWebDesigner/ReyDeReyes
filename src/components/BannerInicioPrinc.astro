@@ -3,57 +3,60 @@ import Titulo from "./Titulo.astro";
 ---
 
 <div
-    id="BannerPrinc"
-    class="w-full relative h-[70vh] opacity-10 scale-90 xl:[60vh]"
+	id="BannerPrinc"
+	class="w-full relative h-[80vh] opacity-10 scale-90 xl:[60vh]"
 >
-    <img
-        class="ImagePort hidden md:block w-full h-full absolute object-cover"
-        src="/Home1.png"
-        alt="Portada de inicio"
-    />
-    <img
-        class="md:hidden w-full h-full absolute object-cover opacity-25"
-        src="/HomeMobile.png"
-        alt="Portada de inicio"
-    />
-    <Titulo />
+	<img
+		class="ImagePort hidden md:block w-full h-full absolute object-cover"
+		src="/Home1.png"
+		alt="Portada de inicio"
+	/>
+	<img
+		class="ImagePortMobile md:hidden w-full h-full absolute object-cover"
+		src="/HomeMobile1.png"
+		alt="Portada de inicio"
+	/>
+	<Titulo />
 </div>
 <style>
-    #BannerPrinc{
-        transition: .5s all;
-    }
-    img{
-        transition: 1s all;
-    }
+	#BannerPrinc {
+		transition: 0.5s all;
+	}
+	img {
+		transition: 1s all;
+	}
 </style>
 <script>
-    const BannerPrinc = document.getElementById("BannerPrinc");
-    const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
-    };
-    function loadPage(entrys, observe){
-        entrys.forEach(entry => {
-            if(entry.isIntersecting)
-            {
-                if(entry.target.classList.contains('opacity-10') && entry.target.classList.contains('scale-90')){
-                    entry.target.classList.remove('opacity-10')
-                    entry.target.classList.remove('scale-90')
-                }
-            }
-        });
-    }
-    const observerPresent=new IntersectionObserver(loadPage, options)
-    observerPresent.observe(BannerPrinc);
-    const ImagePort=document.querySelector('.ImagePort')
-    console.dir(ImagePort)
-    let i=1
-    setInterval(() => {
-        i++
-        ImagePort.attributes[1].nodeValue=`/Home${i}.png`
-        if(i===2){
-            return i=0
-        }
-    }, 3000);
+	const BannerPrinc = document.getElementById("BannerPrinc");
+	const options = {
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.5,
+	};
+	function loadPage(entrys, observe) {
+		entrys.forEach((entry) => {
+			if (entry.isIntersecting) {
+				if (
+					entry.target.classList.contains("opacity-10") &&
+					entry.target.classList.contains("scale-90")
+				) {
+					entry.target.classList.remove("opacity-10");
+					entry.target.classList.remove("scale-90");
+				}
+			}
+		});
+	}
+	const observerPresent = new IntersectionObserver(loadPage, options);
+	observerPresent.observe(BannerPrinc);
+	const ImagePort = document.querySelector(".ImagePort");
+	const ImagePortMobile = document.querySelector('.ImagePortMobile')
+	let j = 1;
+	setInterval(() => {
+		j++;
+		ImagePort.attributes[1].nodeValue = `/Home${j}.png`;
+		ImagePortMobile.attributes[1].nodeValue = `/HomeMobile${j}.png`
+		if (j === 2) {
+			return (j = 0);
+		}
+	}, 3000);
 </script>
