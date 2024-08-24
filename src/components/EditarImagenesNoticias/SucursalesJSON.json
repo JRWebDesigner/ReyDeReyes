@@ -1,0 +1,22 @@
+[
+    {
+        "sucursal":"La Paz",
+        "imagen":"la-paz",
+        "icono":"icono-la-paz"
+    }, 
+    {
+        "sucursal":"El Alto",
+        "imagen":"el-alto",
+        "icono":"icono-el-alto"
+    },
+    {
+        "sucursal":"Cochabamba",
+        "imagen":"cbba",
+        "icono":"icono-cocha"
+    },
+    {
+        "sucursal":"Quillacollo",
+        "imagen":"quillacollo",
+        "icono":"icono-quilla"
+    }
+]

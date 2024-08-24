@@ -4,10 +4,10 @@ import Titulo from "./Titulo.astro";
 
 <div
 	id="BannerPrinc"
-	class="w-full relative h-[80vh] opacity-10 scale-90 xl:[60vh]"
+	class="w-full relative flex justify-start items-center h-[70vh] opacity-10 scale-90 xl:h-[80vh]"
 >
 	<img
-		class="ImagePort hidden md:block w-full h-full absolute object-cover"
+		class="ImagePort hidden md:block w-full absolute object-cover"
 		src="/Home1.png"
 		alt="Portada de inicio"
 	/>
@@ -18,15 +18,18 @@ import Titulo from "./Titulo.astro";
 	/>
 	<Titulo />
 </div>
-<style>
-	#BannerPrinc {
-		transition: 0.5s all;
-	}
-	img {
-		transition: 1s all;
-	}
-</style>
 <script>
+	const ImagePort = document.querySelector(".ImagePort");
+	const ImagePortMobile = document.querySelector('.ImagePortMobile')
+	let j = 1;
+	setInterval(() => {
+		j++;
+		ImagePort.attributes[1].nodeValue = `/Home${j}.png`;
+		ImagePortMobile.attributes[1].nodeValue = `/HomeMobile${j}.png`
+		if (j === 2) {
+			return (j = 0);
+		}
+	}, 5000);
 	const BannerPrinc = document.getElementById("BannerPrinc");
 	const options = {
 		root: null,
@@ -48,15 +51,14 @@ import Titulo from "./Titulo.astro";
 	}
 	const observerPresent = new IntersectionObserver(loadPage, options);
 	observerPresent.observe(BannerPrinc);
-	const ImagePort = document.querySelector(".ImagePort");
-	const ImagePortMobile = document.querySelector('.ImagePortMobile')
-	let j = 1;
-	setInterval(() => {
-		j++;
-		ImagePort.attributes[1].nodeValue = `/Home${j}.png`;
-		ImagePortMobile.attributes[1].nodeValue = `/HomeMobile${j}.png`
-		if (j === 2) {
-			return (j = 0);
-		}
-	}, 3000);
+	
 </script>
+<style>
+	#BannerPrinc {
+		transition: 0.5s all;
+	}
+	img {
+		transition: 1s all;
+	}
+</style>
+
