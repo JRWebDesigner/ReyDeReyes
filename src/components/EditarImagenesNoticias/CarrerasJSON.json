@@ -1,22 +1,30 @@
 [
     {
-        "carrera":"POLICÍAS ",
-        "imagen":"",
-        "descripcion":""
+        "carrera":"POLICÍA ",
+        "letra":"/policia-letra.png",
+        "imagen":"/policia-sin-nada",
+        "descripcion":"",
+        "enlace":"policia"
     }, 
     {
-        "carrera":"MILITARES ",
-        "imagen":"",
-        "descripcion":""
+        "carrera":"MILITAR ",
+        "letra":"/militar-letra.png",
+        "imagen":"/militar-sin-nada",
+        "descripcion":"",
+        "enlace":"militares"
     },
     {
         "carrera":"ESFM",
-        "imagen":"",
-        "descripcion":""
+        "letra":"/esfm-letra.png",
+        "imagen":"/esfm-sin-nada",
+        "descripcion":"",
+        "enlace":"esfm"
     },
     {
-        "carrera":"UNIVERSITARIOS",
-        "imagen":"",
-        "descripcion":""
+        "carrera":"UNIVERSIDADES",
+        "letra":"/universidad-letra.png",
+        "imagen":"/universidad-sin-nada",
+        "descripcion":"",
+        "enlace":"universidad"
     }
 ]

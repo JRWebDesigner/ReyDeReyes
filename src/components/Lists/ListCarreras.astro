@@ -3,61 +3,9 @@
   class="carousel z-30 slide w-full h-full"
   data-bs-ride="carousel"
 >
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="1800">
-      <a
-        class="m-auto bg-green-500 relative w-[80%] h-[240px] md:h-[500px] rounded-3xl flex flex-col justify-center items-center p-3 "
-        href="/Carreras"
-      >
-        <div class="z-10 text-white">
-          <h2 class="text-xl md:text-5xl font-bold text-center">
-            nombre de carrera
-          </h2>
-          <p class="text-sm">
-            lorem ipsum dolor sit amet consectetur adipisicing elit. eligendi,
-            recusandae.
-          </p>
-        </div>
-      </a>
-    </div>
-    <div class="carousel-item" data-bs-interval="1800">
-      <a
-      class="m-auto bg-black relative w-[80%] h-[240px] md:h-[500px] rounded-3xl flex flex-col justify-center items-center p-3 "
-      href="/Carreras"
-    >
-    <div class="z-10 text-white">
-      <h2 class="text-xl md:text-5xl font-bold text-center">
-        nombre de carrera
-      </h2>
-      <p class="text-sm">
-        lorem ipsum dolor sit amet consectetur adipisicing elit. eligendi,
-        recusandae.
-      </p>
-    </div>
-      <img
-        class="w-full rounded-3xl h-full absolute z-0 object-cover opacity-35"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKwXdxd0Vxz-jSTp2TKtpQXB3kq65h225lvg&s"
-        alt=""
-      />
-    </a>
-    </div>
-    <div class="carousel-item" data-bs-interval="1800">
-      <a
-        class="m-auto bg-red-600 relative w-[80%] h-[240px] md:h-[500px] rounded-3xl flex flex-col justify-center items-center p-3 shadow-sm"
-        href="/Carreras"
-      >
-        <div class="z-10 text-white">
-          <h2 class="text-xl md:text-5xl font-bold text-center">
-            nombre de carrera
-          </h2>
-          <p class="text-sm">
-            lorem ipsum dolor sit amet consectetur adipisicing elit. eligendi,
-            recusandae.
-          </p>
-        </div>
-      </a>
-    </div>
-  </div>
+<div class="carousel-inner">
+
+</div>
   <button
     class="carousel-control-prev"
     type="button"
@@ -73,7 +21,62 @@
     data-bs-target="#carreras"
     data-bs-slide="next"
   >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="carousel-control-next-icon " aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<script>
+  import CarrerasJSON from "../EditarImagenesNoticias/CarrerasJSON.json";
+  const loadImages = document.querySelector(".carousel-inner");
+  loadImages.innerHTML = CarrerasJSON.map((carrera) => {
+    if (CarrerasJSON[0].carrera === carrera.carrera) {
+      return `
+          <div class="carousel-item active" data-bs-interval="1800">
+            <a
+            class="m-auto bg-black relative w-[80%] h-[240px] md:h-[500px] rounded-3xl flex flex-col justify-center items-center p-3 "
+            href="/Carreras/${carrera.enlace}"
+          >
+          <div class="z-10 text-white">
+            <img class="w-[70%]" 
+              src="${carrera.letra}"
+            />
+            </div>
+            <img
+              class="w-[40%] absolute bottom-1 right-4 z-40"
+              src="/boton-inscripciones.png"
+            />
+            <img
+              class="w-full rounded-3xl h-full absolute z-0 object-cover opacity-35"
+              src="${carrera.imagen}.png"
+              alt=""
+            />
+          </a>
+          </div>`;
+    } else {
+      return `    
+      <div class="carousel-item" data-bs-interval="1800">
+          <a
+            class="m-auto bg-black relative w-[80%] h-[240px] md:h-[500px] rounded-3xl flex flex-col justify-center items-center p-3 "
+            href="/Carreras/${carrera.enlace}"
+          >
+          <div class="z-10 text-white">
+            <img class="w-[70%]" 
+              src="${carrera.letra}"
+            />
+            </div>
+            <img
+              class="w-[40%] absolute bottom-1 right-4 z-40"
+              src="/boton-inscripciones.png"
+            />
+            <img
+              class="w-full rounded-3xl h-full absolute z-0 object-cover opacity-35"
+              src="${carrera.imagen}.png"
+              alt=""
+            />
+          </a>
+      </div>
+`;
+    }
+  }).join("");
+
+</script>
