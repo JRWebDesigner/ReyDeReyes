@@ -1,7 +1,7 @@
 ---
+import Footer from "../components/CompImportant/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import BannerInicio from "../components/BannerInicio.astro";
-import CardSucursal from "../components/Cards/CardSucursal.astro";
 ---
 
 <Layout title="Rey de Reyes | Todas nuestras sucursales en Bolivia">
@@ -11,33 +11,54 @@ import CardSucursal from "../components/Cards/CardSucursal.astro";
   />
   <div class="px-[10%] py-[2%] bg-orange-100">
     <h2 class="subtitle text-4xl md:text-6xl font-medium">Conóce Nuestras Sucursales</h2>
-    <CardSucursal
-      sucursalImagen="la-paz"
-      sucursalIcon="icono-la-paz"
-      sucursal="La Paz"
-      route="LaPaz"
-    />
-    <CardSucursal 
-    sucursalImagen="el-alto"
-      sucursalIcon="icono-el-alto"
-      sucursal="El Alto"
-      route="ElAlto"
-    />
-    <CardSucursal 
-      sucursalImagen="cbba"
-      sucursalIcon="icono-cocha"
-      sucursal="Cochabamba"
-      route="Cochabamba"
-    />
-    <CardSucursal 
-      sucursalImagen="quillacollo"
-      sucursalIcon="icono-quilla"
-      sucursal="Santa Cruz"
-      route="SantaCruz"
-    />
+    <div id="containerSucurs">
+
+    </div>
   </div>
+  <Footer slot="footer"/>
 </Layout>
 <script>
+  import SucursalesJSON from '../components/EditarImagenesNoticias/SucursalesJSON.json'
+  const Container=document.getElementById('containerSucurs')
+  Container.innerHTML=SucursalesJSON.map((sucursal)=>{
+    return `
+      <div class="cardEfect duration-1000 my-20 opacity-10 bg-white rounded-2xl h-auto w-full p-2 flex flex-wrap justify-center gap-14">
+  <a
+      class="relative flex justify-start items-center Sucursales scale-75 w-[80%] md:w-[45%] lg:w-[30vw]"
+      href="/Sucursales/${sucursal.enlace}"
+    >
+      <img class="w-full" src="/Sucursales/${sucursal.imagen}.png" alt="Sucursal de ${sucursal.sucursal}">
+      <img class="IconSucur absolute w-[40%] left-8 md:left-14" src="/Sucursales/${sucursal.icono}.png" alt="Icono de ${sucursal.sucursal}">
+    </a>  
+    <div class="flex flex-col justify-center">
+      <h3 class="text-[1.4rem] md:text-3xl 2xl:text-4xl font-semibold">
+        Sucursal de ${sucursal.sucursal} | Rey de Reyes
+      </h3>
+      <div class="text-4xl flex flex-col">
+        <a class="text-lg xl:text-2xl 2xl:text-4xl flex items-center" href="${sucursal.WhatsApp}" target="_blank">
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg> Rey de Reyes | ${sucursal.sucursal}
+        </a>
+        <a class="text-lg xl:text-2xl 2xl:text-4xl w-full flex items-center" href="${sucursal.Facebook}" target="_blank">
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>Rey de Reyes | ${sucursal.sucursal}
+        </a>
+        
+        <a class="text-lg xl:text-2xl 2xl:text-4xl flex items-center" href="${sucursal.TikTok}" target="_blank">
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>Rey de Reyes | ${sucursal.sucursal}
+        </a>
+        <a class="text-lg xl:text-2xl 2xl:text-4xl flex items-center" href="${sucursal.Instagram}" target="_blank">
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg>Rey de Reyes | ${sucursal.sucursal}
+        </a>
+      </div>
+      <button class="bg-orange-500 text-center text-white font-bold rounded-lg w-[100%]">
+       <a class="block md:text-3xl" href="/Sucursales/${sucursal.enlace}">Más Informacion</a>
+      </button>
+    </div>
+  </div>
+    `
+  }).join('')
+
+
+
   const cardEfect = document.querySelectorAll('.cardEfect')
   let options = {
   root: null,

@@ -1,22 +1,58 @@
 [
     {
         "sucursal":"La Paz",
+        "enlace":"LaPaz",        
         "imagen":"la-paz",
-        "icono":"icono-la-paz"
+        "icono":"icono-la-paz",
+        "WhatsApp":"https://wa.link/du1j7j",
+        "Facebook":"https://www.facebook.com/InstitutoReydeReyesLaPaz", 
+        "TikTok":"https://www.tiktok.com/@institutoreydereyes.lp", 
+        "Instagram" :"https://www.instagram.com/instituto.reydereyes.lapaz/",
+        "Theands":"https://www.threads.net/@instituto.reydereyes.lapaz?xmt=AQGz6D65wPty2WrY7IegarT3zmzyoidV9PIO0DFL3sQ80Xg", 
+        "YouTube":"https://www.youtube.com/@institutoreydereyesbolivia",
+        "X":"https://x.com/Instreydereyes", 
+        "Maps" :"/"
     }, 
     {
         "sucursal":"El Alto",
+        "enlace":"ElAlto",        
         "imagen":"el-alto",
-        "icono":"icono-el-alto"
+        "icono":"icono-el-alto",
+        "WhatsApp":"https://wa.link/du1j7j", 
+        "Facebook":"https://www.facebook.com/InstitutoReydeReyesElAlto", 
+        "TikTok":"https://www.tiktok.com/@instituto.reyde.reyes?lang=en", 
+        "Instagram":"https://www.instagram.com/instituto.reydereyes.elalto/", 
+        "Theands":"https://www.threads.net/@instituto.reydereyes.elalto?xmt=AQGzIJbsnBBImYOjvn19k8SpYf82Z3LL0LBa-jqJAAjG97s",
+        "YouTube":"https://www.youtube.com/@institutoreydereyesbolivia",
+        "X":"https://x.com/Instreydereyes", 
+        "Maps" :"/"
     },
     {
         "sucursal":"Cochabamba",
+        "enlace":"Cochabamba",        
         "imagen":"cbba",
-        "icono":"icono-cocha"
+        "icono":"icono-cocha",
+        "WhatsApp":"https://wa.link/du1j7j",
+        "Facebook":"https://www.facebook.com/InstitutoReydeReyesLaPaz", 
+        "TikTok":"https://www.tiktok.com/@institutoreydereyes.lp", 
+        "Instagram" :"https://www.instagram.com/instituto.reydereyes.lapaz/",
+        "Theands":"https://www.threads.net/@instituto.reydereyes.lapaz?xmt=AQGz6D65wPty2WrY7IegarT3zmzyoidV9PIO0DFL3sQ80Xg", 
+        "YouTube":"https://www.youtube.com/@institutoreydereyesbolivia",
+        "X":"https://x.com/Instreydereyes", 
+        "Maps" :"/"
     },
     {
         "sucursal":"Quillacollo",
+        "enlace":"Quillacolloa",        
         "imagen":"quillacollo",
-        "icono":"icono-quilla"
+        "icono":"icono-quilla",
+        "WhatsApp":"https://wa.link/du1j7j",
+        "Facebook":"https://www.facebook.com/InstitutoReydeReyesLaPaz", 
+        "TikTok":"https://www.tiktok.com/@institutoreydereyes.lp", 
+        "Instagram" :"https://www.instagram.com/instituto.reydereyes.lapaz/",
+        "Theands":"https://www.threads.net/@instituto.reydereyes.lapaz?xmt=AQGz6D65wPty2WrY7IegarT3zmzyoidV9PIO0DFL3sQ80Xg", 
+        "YouTube":"https://www.youtube.com/@institutoreydereyesbolivia",
+        "X":"https://x.com/Instreydereyes", 
+        "Maps" :"/"
     }
 ]
