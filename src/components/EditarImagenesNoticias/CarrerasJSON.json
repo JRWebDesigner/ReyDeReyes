@@ -4,27 +4,27 @@
         "letra":"/policia-letra.png",
         "imagen":"/policia-sin-nada",
         "descripcion":"",
-        "enlace":"policia"
+        "enlace":"Policias"
     }, 
     {
         "carrera":"MILITAR ",
         "letra":"/militar-letra.png",
         "imagen":"/militar-sin-nada",
         "descripcion":"",
-        "enlace":"militares"
+        "enlace":"Militares"
     },
     {
         "carrera":"ESFM",
         "letra":"/esfm-letra.png",
         "imagen":"/esfm-sin-nada",
         "descripcion":"",
-        "enlace":"esfm"
+        "enlace":"Esfm"
     },
     {
         "carrera":"UNIVERSIDADES",
         "letra":"/universidad-letra.png",
         "imagen":"/universidad-sin-nada",
         "descripcion":"",
-        "enlace":"universidad"
+        "enlace":"Universidades"
     }
 ]

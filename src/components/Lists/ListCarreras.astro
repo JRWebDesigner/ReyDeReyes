@@ -31,7 +31,7 @@
   loadImages.innerHTML = CarrerasJSON.map((carrera) => {
     if (CarrerasJSON[0].carrera === carrera.carrera) {
       return `
-          <div class="carousel-item active" data-bs-interval="1800">
+          <div class="carousel-item active" data-bs-interval="2600">
             <a
             class="m-auto  relative w-[80%] h-[240px] md:h-[700px] rounded-3xl flex flex-col justify-center items-start p-3 "
             href="/Carreras/${carrera.enlace}"
@@ -54,7 +54,7 @@
           </div>`;
     } else {
       return `    
-      <div class="carousel-item" data-bs-interval="1800">
+      <div class="carousel-item" data-bs-interval="2600">
           <a
             class="m-auto  relative w-[80%] h-[240px] md:h-[700px] rounded-3xl flex flex-col justify-center items-start p-3 "
             href="/Carreras/${carrera.enlace}"
