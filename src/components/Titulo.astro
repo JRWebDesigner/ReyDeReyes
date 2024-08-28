@@ -1,34 +1,67 @@
 <div
-  class="flex items-center px-36 justify-start lg:w-[70%]"
+id="Contain"  
+class="absolute md:static top-12 md:flex md:items-center md:px-36 justify-start w-[200px] md:w-[600px] lg:w-[70%]"
 >
   <img
-    class="ImageLetras z-30 title -translate-x-[50%]"
+    class="ImageLetras z-30 title md:-translate-x-[50%]"
     src="/Letras1.png"
     alt="letras"
   />
 </div>
 <style>
+  #Contain{
+    transition: 1.3s all;
+  }
   img {
     transition: 1.3s all;
     text-shadow: 0.5px 0.5px 5px rgb(0, 0, 0);
   }
 </style>
 <script>
+  const Contain = document.getElementById('Contain')
   const ImageLetras = document.querySelector(".ImageLetras");
   let i = 1;
-  setInterval(() => {
-    i++;
-    ImageLetras.attributes[1].nodeValue = `/Letras${i}.png`;
-    if (i === 1 && ImageLetras.classList.contains("translate-x-[70%]")) {
-      ImageLetras.classList.remove("translate-x-[70%]");
-      ImageLetras.classList.remove("-translate-x-[50%]");
-    }
-    if (i === 2) {
-      ImageLetras.classList.remove("-translate-x-[50%]");
-      ImageLetras.classList.add("translate-x-[70%]");
-    }
-    if (i === 2) {
-      return (i = 0);
-    }
-  }, 5000);
+  console.log("La resolución de tu pantalla es: " + screen.width + " x " + screen.height) 
+  if(screen.width > 767){
+    setInterval(() => {
+      i++;
+      ImageLetras.attributes[1].nodeValue = `/Letras${i}.png`;
+      
+      if (i === 1 && ImageLetras.classList.contains("md:translate-x-[68%]")) {
+        ImageLetras.classList.remove("md:translate-x-[68%]");
+        ImageLetras.classList.add("md:-translate-x-[50%]");
+        
+      }
+      if (i === 2) {
+        ImageLetras.classList.remove("md:-translate-x-[50%]");
+        ImageLetras.classList.add("md:translate-x-[68%]");
+      }
+      if (i === 2) {
+        return (i = 0);
+      }
+    }, 5000);
+  }
+  if (screen.width < 767) {
+    setInterval(() => {
+      i++;
+      ImageLetras.attributes[1].nodeValue = `/Letras${i}.png`;
+      
+      if (i === 1 && Contain.classList.contains("bottom-[40%]")) {
+        Contain.classList.remove('bottom-[40%]');
+        Contain.classList.add("top-12");
+        ImageLetras.classList.remove("translate-x-[calc(100%-10%)]");
+        
+      }
+      if (i === 2) {
+        Contain.classList.add('bottom-[40%]');
+        Contain.classList.remove("top-12");
+        ImageLetras.classList.add("translate-x-[calc(100%-10%)]");
+
+      }
+      if (i === 2) {
+        return (i = 0);
+      }
+    }, 5000);
+}
+
 </script>
