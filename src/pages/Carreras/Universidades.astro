@@ -1,10 +1,118 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import BannerInicio from "../../components/BannerInicio.astro";
+import Footer from "../../components/CompImportant/Footer.astro";
 ---
+
 <Layout title="UNIVERSIDADES">
-    <BannerInicio 
+    <BannerInicio
         titulo="UNIVERSIDADES"
         imagen="https://www.eabolivia.com/images/stories/photos/umsa-bo.jpg"
     />
+    <h2 class="text-center mt-10">
+        Facultad de<span class="italic text-blue-950 text-[4rem]"
+            >Ingenieria</span>
+    </h2>
+    <div class="m-10 flex justify-center items-center gap-10">
+        <div class="flex-col flex justify-center items-center gap-7">
+            <ul class="text-3xl">
+                <li>Electromecánica</li>
+                <li>Electrónica</li>
+                <li>Civil</li>
+                <li>Industrial</li>
+                <li>Petrolera</li>
+                <li>Ambiental</li>
+                <li>Mecánica</li>
+                <li>Metalurgica</li>
+                <li>Alimentos</li>
+                <li>Seguridad Industrial y Salud Ocupacional</li>
+                <li>Producción Industrial</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl bg-orange-600">
+            <h3
+                class="lg:text-2xl xl:text-3xl text-center font-bold text-white"
+            >
+                Materias
+            </h3>
+            <div
+                class="py-4 min-w-[250px] flex flex-col justify-start items-center rounded-2xl bg-white text-lg xl:text-2xl"
+            >
+                <span>Matemática</span><span>Física</span><span>Química</span
+                ><span>Calculo I</span>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center mt-32">
+        Facultad de<span class="italic text-blue-950 text-[4rem]"
+            >Medicina</span>
+    </h2>
+    <div class="m-10 flex justify-center items-center gap-28">
+        <div class="flex-col flex justify-center items-center gap-7">
+            <ul class="text-3xl grid gap-5">
+                <li>Enfermería</li>
+                <li>Nutrición</li>
+                <li>Odontología</li>
+                <li>Bioquímica</li>
+                <li>Veterinaria</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl bg-orange-600">
+            <h3 class="lg:text-xl xl:text-2xl text-center font-bold text-white">
+                Materias
+            </h3>
+            <div
+                class="min-w-[250px] grid place-items-center rounded-2xl bg-white text-sm xl:text-xl"
+            >
+                <span>Matemática</span><span>Física</span><span>Química</span
+                ><span>Bioligía</span><span>Lenguaje</span><span>Anatomia</span
+                ><span>Inglés</span>
+            </div>
+        </div>
+    </div>
+    <h2 class="text-center mt-32">
+        Facultad de<span class="italic text-blue-950 text-[4rem]"
+            >Ciencias Economicas</span>
+    </h2>
+    <div class="m-10 flex justify-center items-center gap-28">
+        <div class="flex-col flex justify-center items-center gap-7">
+            <ul class="text-3xl grid gap-5">
+                <li>Administración de Empresas</li>
+                <li>Conataduria Publica</li>
+                <li>Economia</li>
+            </ul>
+        </div>
+        <div class="rounded-2xl bg-orange-600">
+            <h3 class="lg:text-xl xl:text-2xl text-center font-bold text-white">
+                Materias
+            </h3>
+            <div
+                class="min-w-[250px] grid place-items-center rounded-2xl bg-white text-sm xl:text-xl"
+            >
+                <span>Matemática(Conjuntos)</span>
+                <span>Lenguaje(Literatura)</span>
+            </div>
+        </div>
+    </div>
+    <Footer slot="footer" />
 </Layout>
+<style>
+    ul {
+        list-style-type: disc;
+    }
+    li {
+        color: rgb(1, 1, 109);
+        font-weight: 600;
+        font-style: italic;
+    }
+    span {
+        color: rgb(1, 1, 109);
+        font-family: "mont";
+    }
+    h2 {
+        font-family: "adelia";
+        font-size: 3rem;
+        font-weight: 900;
+        color: #d94a00;
+    }
+</style>
