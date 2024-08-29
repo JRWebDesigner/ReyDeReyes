@@ -12,9 +12,9 @@ import BannerInicio from "../../components/BannerInicio.astro";
 
    
     
-        <div class="flex flex-wrap flex-col justify-center items-center gap-7 w-full my-20 py-10">
-            <h2 class="mx-auto text-5xl italic font-bold text-center text-[#00007e] font-['montserrat']"><span class="text-[#ed6d2e]">Preparación para el examen</span> <br> Psicológico-Psicotécnico-Psicométrico:</h2>
-            <ul class="bg-white shadow-lg p-10 text-3xl rounded-3xl border-2 border-[yellow]">
+        <div class="mx-auto flex flex-wrap flex-col justify-center items-center w-[90%] md:w-full gap-7 m-70 md:m-20 py-10">
+            <h2 class="mx-auto text-2xl md:text-5xl italic font-bold text-center text-[#00007e] font-['montserrat']"><span class="text-[#ed6d2e]">Preparación para el examen</span> <br> Psicológico-Psicotécnico-Psicométrico:</h2>
+            <ul class="bg-white shadow-lg p-10 text-xl md:text-3xl rounded-3xl border-2 border-[yellow]">
                 <li>Aspecto de Personalidad</li>
                 <li>Aptitudes Vocacionales-Manejo de Valores</li>
                 <li>Características de Liderazgo</li>
@@ -26,8 +26,8 @@ import BannerInicio from "../../components/BannerInicio.astro";
         </div>
         <div class="flex flex-wrap bg-[#ed6d2e] justify-center items-center gap-7 w-full my-20 py-10">
             <div class="w-[90%] md:w-[40%]">
-                <h3 class="mx-auto text-5xl italic font-bold text-center text-[#00007e]">Materias a llevar:</h3>
-                <ul class="bg-white shadow-lg p-10 text-3xl rounded-3xl border-2 border-[yellow]">
+                <h3 class="mx-auto text-2xl md:text-5xl italic font-bold text-center text-[#00007e]">Materias a llevar:</h3>
+                <ul class="bg-white shadow-lg p-10 text-xl md:text-3xl rounded-3xl border-2 border-[yellow]">
                         <li>Matemática</li>
                         <li>Física</li>
                         <li>Química</li>
@@ -41,8 +41,8 @@ import BannerInicio from "../../components/BannerInicio.astro";
                 </ul>
             </div>
             <div class="w-[90%] md:w-[40%]">
-                <h3 class="mx-auto text-5xl italic font-bold text-center text-[#00007e]">Seminarios:</h3>
-                <ul class="bg-white shadow-lg p-10 text-3xl rounded-3xl border-2 border-[yellow]">
+                <h3 class="mx-auto text-2xl md:text-5xl italic font-bold text-center text-[#00007e]">Seminarios:</h3>
+                <ul class="bg-white shadow-lg p-10 text-xl md:text-3xl rounded-3xl border-2 border-[yellow]">
                     <li>Resolución de exámenes</li>
                     <li>Oratoria y Liderazgo</li>
                     <li>Técnicas de estudio</li>
@@ -51,6 +51,19 @@ import BannerInicio from "../../components/BannerInicio.astro";
                 </ul>
             </div>
         </div>
+        <div class="w-full">
+            <div class="m-auto w-auto flex flex-col justify-center items-center p-7">
+                <h3 class="shadow-lg bg-blue-900 border-2 border-[yellow] md:w-[500px] text-xl md:text-7xl italic font-bold text-yellow-500 p-3 text-center rounded-2xl">Beneficios</h3>
+                <ul class="shadow-lg md:w-[700px] italic border-2 border-[yellow] bg-[#d94a00] font-bold  md:text-3xl text-white p-3 rounded-2xl">
+                    <li>Prospectos</li>
+                    <li>Exámenes Pasados</li>
+                    <li>Banco de Preguntas</li>
+                    <li>Exámenes Simulacro</li>
+                    <li>Documentos</li>
+                    <li>Diversos textos y otros</li>
+                </ul>
+            </div>
+        </div>>
        <Footer name="footer"/>
 </Layout>
 <style>
@@ -59,5 +72,9 @@ import BannerInicio from "../../components/BannerInicio.astro";
     }
     ul {
         list-style-type: disc;
+    }
+    li{
+        font-style: italic;
+        margin-left: 20px;
     }
 </style>
