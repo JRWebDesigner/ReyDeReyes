@@ -1,10 +1,63 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/CompImportant/Footer.astro";
 import BannerInicio from "../../components/BannerInicio.astro";
 ---
+
 <Layout title="Policias">
-    <BannerInicio 
+    <BannerInicio
         titulo="Policias"
         imagen="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_ezWPI1eWN65V26rWegPT-HA7QcUmyNxOmA&s"
     />
+
+   
+    
+        <div class="flex flex-wrap flex-col justify-center items-center gap-7 w-full my-20 py-10">
+            <h2 class="mx-auto text-5xl italic font-bold text-center text-[#00007e] font-['montserrat']"><span class="text-[#ed6d2e]">Preparación para el examen</span> <br> Psicológico-Psicotécnico-Psicométrico:</h2>
+            <ul class="bg-white shadow-lg p-10 text-3xl rounded-3xl border-2 border-[yellow]">
+                <li>Aspecto de Personalidad</li>
+                <li>Aptitudes Vocacionales-Manejo de Valores</li>
+                <li>Características de Liderazgo</li>
+                <li>Alteraciones Psicológicas</li>
+                <li>Cuestionarios de Personalidad</li>
+                <li>Proyectivos y Dibujos</li>
+                <li>Test Verbal y otros</li>
+            </ul>
+        </div>
+        <div class="flex flex-wrap bg-[#ed6d2e] justify-center items-center gap-7 w-full my-20 py-10">
+            <div class="w-[90%] md:w-[40%]">
+                <h3 class="mx-auto text-5xl italic font-bold text-center text-[#00007e]">Materias a llevar:</h3>
+                <ul class="bg-white shadow-lg p-10 text-3xl rounded-3xl border-2 border-[yellow]">
+                        <li>Matemática</li>
+                        <li>Física</li>
+                        <li>Química</li>
+                        <li>Lenguaje</li>
+                        <li>Historia</li>
+                        <li>Geografía</li>
+                        <li>Inglés</li>
+                        <li>Cálculo I</li>
+                        <li>Cívica</li>
+                        <li>Biología</li>
+                </ul>
+            </div>
+            <div class="w-[90%] md:w-[40%]">
+                <h3 class="mx-auto text-5xl italic font-bold text-center text-[#00007e]">Seminarios:</h3>
+                <ul class="bg-white shadow-lg p-10 text-3xl rounded-3xl border-2 border-[yellow]">
+                    <li>Resolución de exámenes</li>
+                    <li>Oratoria y Liderazgo</li>
+                    <li>Técnicas de estudio</li>
+                    <li>Psicología</li>
+                    <li>Entrevista Personal</li>
+                </ul>
+            </div>
+        </div>
+       <Footer name="footer"/>
 </Layout>
+<style>
+    h3{
+        font-family: 'adelia';
+    }
+    ul {
+        list-style-type: disc;
+    }
+</style>
