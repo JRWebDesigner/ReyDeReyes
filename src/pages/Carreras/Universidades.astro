@@ -10,12 +10,13 @@ import Footer from "../../components/CompImportant/Footer.astro";
         imagen="https://www.eabolivia.com/images/stories/photos/umsa-bo.jpg"
     />
     <h2 class="EfectFacu duration-1000 text-center mt-10">
-        Facultad de<span class="italic text-blue-950 text-[4rem]"
-            >Ingenieria</span>
+        Facultad de<span class="italic text-blue-950 text-[3rem] md:text-[4rem]"
+            >Ingenieria</span
+        >
     </h2>
-    <div class="m-10 flex duration-1000 justify-center items-center gap-10">
-        <div class="flex-col flex justify-center items-center gap-7">
-            <ul class="EfectFacu duration-1000 text-3xl">
+    <div class="m-10 flex flex-wrap duration-1000 justify-center items-center gap-10">
+        <div class="flex-col flex justify-center items-center gap-3 md:gap-7">
+            <ul class="m-auto EfectFacu duration-1000 text-xl md:text-3xl">
                 <li>Electromecánica</li>
                 <li>Electrónica</li>
                 <li>Civil</li>
@@ -44,12 +45,12 @@ import Footer from "../../components/CompImportant/Footer.astro";
         </div>
     </div>
     <h2 class="EfectFacu duration-1000 text-center mt-32">
-        Facultad de<span class="italic text-blue-950 text-[4rem]"
-            >Medicina</span>
+        Facultad de<span class="italic text-blue-950 text-[2.5rem] md:text-[4rem]">Medicina</span
+        >
     </h2>
-    <div class="m-10 duration-1000 flex justify-center items-center gap-28">
-        <div class="flex-col flex justify-center items-center gap-7">
-            <ul class="EfectFacu duration-1000 text-3xl grid gap-5">
+    <div class="m-10 duration-1000 flex flex-wrap justify-center items-center gap-28">
+        <div class="flex-col flex justify-center items-center gap-3 md:gap-7">
+            <ul class="EfectFacu duration-1000 text-xl md:text-3xl grid gap-2 md:gap-5">
                 <li>Enfermería</li>
                 <li>Nutrición</li>
                 <li>Odontología</li>
@@ -58,7 +59,9 @@ import Footer from "../../components/CompImportant/Footer.astro";
             </ul>
         </div>
         <div class="rounded-2xl duration-1000 bg-[#d94a00] shadow-lg">
-            <h3 class="EfectFacu duration-1000 lg:text-xl xl:text-2xl text-center font-bold text-white p-2">
+            <h3
+                class="EfectFacu duration-1000 lg:text-xl xl:text-2xl text-center font-bold text-white p-2"
+            >
                 Materias
             </h3>
             <div
@@ -71,19 +74,22 @@ import Footer from "../../components/CompImportant/Footer.astro";
         </div>
     </div>
     <h2 class="EfectFacu duration-1000 text-center mt-32">
-        Facultad de<span class="italic text-blue-950 text-[4rem]"
-            >Ciencias Economicas</span>
+        Facultad de<span class="italic text-blue-950 text-[2.3rem] md:text-[4rem]"
+            >Ciencias Economicas</span
+        >
     </h2>
-    <div class="m-10 duration-1000 flex justify-center items-center gap-28">
-        <div class="flex-col flex justify-center items-center gap-7">
-            <ul class="EfectFacu duration-1000 text-3xl grid gap-5">
+    <div class="m-10 duration-1000 flex flex-wrap justify-center items-center gap-28">
+        <div class="flex-col flex justify-center items-center gap-3 md:gap-7">
+            <ul class="EfectFacu duration-1000 text-xl md:text-3xl grid gap-2 md:gap-5">
                 <li>Administración de Empresas</li>
                 <li>Conataduria Publica</li>
                 <li>Economia</li>
             </ul>
         </div>
         <div class="rounded-2xl duration-1000 bg-[#d94a00] shadow-lg">
-            <h3 class="EfectFacu duration-1000 lg:text-xl xl:text-2xl text-center font-bold text-white p-2">
+            <h3
+                class="EfectFacu duration-1000 lg:text-xl xl:text-2xl text-center font-bold text-white p-2"
+            >
                 Materias
             </h3>
             <div
@@ -97,6 +103,14 @@ import Footer from "../../components/CompImportant/Footer.astro";
     <Footer slot="footer" />
 </Layout>
 <style>
+    @media (min-width: 768px) {
+        h2 {
+        font-family: "adelia";
+        font-size: 3rem;
+        font-weight: 900;
+        color: #d94a00;
+    }
+    }
     ul {
         list-style-type: disc;
     }
@@ -111,36 +125,36 @@ import Footer from "../../components/CompImportant/Footer.astro";
     }
     h2 {
         font-family: "adelia";
-        font-size: 3rem;
+        font-size:2rem;
         font-weight: 900;
         color: #d94a00;
     }
-    h3{
-        font-family: 'adelia'
+    h3 {
+        font-family: "adelia";
     }
-    .EfectFacu{
+    .EfectFacu {
         transform: translateY(150px);
-        opacity: .5;
+        opacity: 0.5;
     }
 </style>
 <script>
-    const EfectFacu=document.querySelectorAll('.EfectFacu');
+    const EfectFacu = document.querySelectorAll(".EfectFacu");
     const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.67,
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.67,
     };
-    function Efect(entrys,obsercer){
-        entrys.forEach(entry => {
-            if(entry.isIntersecting){
-                if(entry.target.classList.contains("EfectFacu")){
-                    entry.target.classList.remove("EfectFacu")
+    function Efect(entrys, obsercer) {
+        entrys.forEach((entry) => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains("EfectFacu")) {
+                    entry.target.classList.remove("EfectFacu");
                 }
             }
         });
     }
-    const ObserverFacu=new IntersectionObserver(Efect,options)
-    EfectFacu.forEach(facu => {
-        ObserverFacu.observe(facu)
+    const ObserverFacu = new IntersectionObserver(Efect, options);
+    EfectFacu.forEach((facu) => {
+        ObserverFacu.observe(facu);
     });
 </script>
