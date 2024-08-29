@@ -9,10 +9,11 @@ import Nav from './Nav.astro'
             <Nav />
         </ul>
     </nav>
+    
     <button
         title="menu Rey de Reyes"
         name="button"
-        id="buttonNav"
+        id="menu"
         class="z-30 lg:hidden mt-1 absolute right-7"
     >
     <div class="burger-icon">
@@ -23,7 +24,7 @@ import Nav from './Nav.astro'
       
     </button>
     <nav
-        class="block lg:hidden nav-mobile p-4 absolute right-1 rounded-b-lg min-w-[40vw] bg-orange-700 h-[60vh] z-50 rounded-bl-3xl"
+        class="block lg:hidden nav-mobile p-4 absolute right-1 rounded-b-lg min-w-[40vw] bg-orange-700 min-h-[60vh] z-50 rounded-bl-3xl"
     >
         <ul class="w-full h-full flex flex-col justify-center items-center  text-lg z-50">
            <Nav />
@@ -130,7 +131,7 @@ import Nav from './Nav.astro'
   }
 }
 
-    #buttonNav:hover ~ .nav-mobile {
+    #menu:hover ~ .nav-mobile {
         top: 100%;
         opacity: 100;
         transform: scaleY(100%);
@@ -143,3 +144,11 @@ import Nav from './Nav.astro'
         color:#831a1a !important;
     }
 </style>
+<script>
+  const menu=document.getElementById('menu');
+  const NavMobil=document.getElementById('navMobil')
+  menu.addEventListener('click', ()=>{
+      NavMobil.classList.toggle('-translate-y-96')
+      NavMobil.classList.toggle('opacity-0')
+  })
+</script>
