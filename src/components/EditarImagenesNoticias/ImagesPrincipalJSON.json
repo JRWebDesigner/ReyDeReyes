@@ -1,15 +1,33 @@
 [
     {
-        "imagen":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiq0eZN7X-uKjxykl6cSLf48WhECeNzh-IhQ&s",
-        "tituloImagen":"Estudiantes de la sucursal de La Paz pasando clases"
-    },
-    {
-        "imagen":"https://scontent.flpb1-1.fna.fbcdn.net/v/t39.30808-6/455181137_946475667494404_1350460532256520924_n.jpg?stp=dst-jpg_p526x296&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fVgMMfdbE6QQ7kNvgGpx_XO&_nc_ht=scontent.flpb1-1.fna&oh=00_AYCV7I31H7DmKmJQmrUWXF31IYa99qH7eLpTCcMttTCQtQ&oe=66C3FB84",
-        "tituloImagen":"convocatoria de ..."
-    },
-    {
-        "imagen":"https://scontent.flpb1-2.fna.fbcdn.net/v/t39.30808-6/454806637_944277681047536_4117422912199454562_n.jpg?stp=dst-jpg_p526x296&_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6ZO3dOPlv2MQ7kNvgHXvRYg&_nc_ht=scontent.flpb1-2.fna&oh=00_AYA-hXzNQ-dcyDopHpj_xfQxliVhkLpaCHy6C5ooIOkKxg&oe=66C3FF41",
-        "tituloImagen":"convocatoria de ..."
+        "imagen":"/CarruselPrincipal/img1.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img2.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img3.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img4.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img5.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img6.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img7.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img8.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img9.jpg",
+        "tituloImagen":"imagen de rey de reyes"
+    },{
+        "imagen":"/CarruselPrincipal/img10.jpg",
+        "tituloImagen":"imagen de rey de reyes"
     }
-    
 ]
