@@ -1,116 +1,102 @@
 ---
 import Footer from "../../components/CompImportant/FooterS.astro";
 import Layout from "../../layouts/Layout.astro";
+import BannerInicio from "../../components/BannerInicio.astro";
 ---
 <Layout title="Rey de Reyes | La Paz">
-    <div class="my-16">
-        <h1 class="text-5xl md:text-7xl font-bold text-center mb-7">Sucursal de La Paz</h1>
-        <div class="flex flex-wrap md:flex-nowrap justify-center">
-            <div>
-                <h2 class="subtitle text-center md:text-5xl text-2xl">
-                    Materiales
-                </h2>
-                <div class="relative m-auto overflow-hidden w-[80%] lg:max-w-[1230px]">
-                    <div
-                      class="flex transition-transform duration-500 ease-in-out"
-                      style="transform: translateX(-0%)"
-                    >
-                      <!-- Slide 1 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+1"
-                          alt="Slide 1"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <!-- Slide 2 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+2"
-                          alt="Slide 2"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <!-- Slide 3 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+3"
-                          alt="Slide 3"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                    </div>
-                    <!-- Navigation buttons -->
-                    <button
-                      id="prevSlide"
-                      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-                    >
-                      &#10094;
-                    </button>
-                    <button
-                      id="nextSlide"
-                      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-                    >
-                      &#10095;
-                    </button>
-                
+  <BannerInicio
+    titulo="Sede de La Paz"
+    imagen="https://www.lostiempos.com/sites/default/files/especial_multimedia/111111111111111111.jpg"
+  />  
+  <div class="my-16">
+        <h1 class="text-5xl md:text-7xl font-bold text-center mb-7">Sede de La Paz</h1>
+        <div class="flex flex-wrap md:flex-nowrap justify-center items-center">
+          <div class="w-[90%] md:w-[45%]">
+            <h2 class="subtitle text-center md:text-5xl text-2xl">Docentes</h2>
+            <div
+              id="Docentes"
+              class="carousel slide w-[45%] mx-auto"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                  <div class="text-center">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
+                      class="mx-auto mb-4 w-[100%] rounded-full"
+                      alt="Avatar"
+                    />
+                    <h5 class="mb-2 text-xl font-medium leading-tight">John Doe</h5>
+                    <p class="text-neutral-500 dark:text-neutral-400">
+                      Web designer
+                    </p>
                   </div>
-            </div>
-            <div>
-                <h2 class="subtitle text-center md:text-5xl text-2xl">
-                    Nuestros Ambientes
-                </h2>
-                <div class="relative m-auto overflow-hidden w-[80%] lg:max-w-[1230px]">
-                    <div
-                      class="flex transition-transform duration-500 ease-in-out"
-                      style="transform: translateX(-0%)"
-                    >
-                      <!-- Slide 1 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+1"
-                          alt="Slide 1"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <!-- Slide 2 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+2"
-                          alt="Slide 2"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <!-- Slide 3 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+3"
-                          alt="Slide 3"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                    </div>
-                    <!-- Navigation buttons -->
-                    <button
-                      id="prevSlide"
-                      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-                    >
-                      &#10094;
-                    </button>
-                    <button
-                      id="nextSlide"
-                      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-                    >
-                      &#10095;
-                    </button>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <div class="text-center">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
+                      class="mx-auto mb-4 w-[100%] rounded-full"
+                      alt="Avatar"
+                    />
+                    <h5 class="mb-2 text-xl font-medium leading-tight">John Doe</h5>
+                    <p class="text-neutral-500 dark:text-neutral-400">
+                      Web designer
+                    </p>
                   </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <div class="text-center">
+                    <img
+                      src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
+                      class="mx-auto mb-4 w-[100%] rounded-full"
+                      alt="Avatar"
+                    />
+                    <h5 class="mb-2 text-xl font-medium leading-tight">John Doe</h5>
+                    <p class="text-neutral-500 dark:text-neutral-400">
+                      Web designer
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="w-[90%] md:w-[45%]">
+            <h2 class="subtitle text-center md:text-5xl text-2xl">
+              Nuestros Ambientes
+            </h2>
+            <div id="ambientes" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                  <img src="https://codersfree.nyc3.digitaloceanspaces.com/images/wipcPYgAf5rHW2qwAoiUuJoIpcppD2gPZUhj1Cgw.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="https://codersfree.nyc3.digitaloceanspaces.com/images/wipcPYgAf5rHW2qwAoiUuJoIpcppD2gPZUhj1Cgw.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="https://codersfree.nyc3.digitaloceanspaces.com/images/wipcPYgAf5rHW2qwAoiUuJoIpcppD2gPZUhj1Cgw.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#ambientes" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#ambientes" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
-        <p class="text-center md:text-4xl px-[15vw] my-16 text-lg">
-            <strong>
-                "🔸𝗜𝗻𝘀𝗶𝘀𝘁𝗶𝗿, 𝗽𝗲𝗿𝘀𝗶𝘀𝘁𝗶𝗿, 𝗿𝗲𝘀𝗶𝘀𝘁𝗶𝗿 𝘆 𝗻𝘂𝗻𝗰𝗮 𝗱𝗲𝘀𝗶𝘀𝘁𝗶𝗿‼️"
-            </strong>
-        </p>
-    </div>
+      </div>
+      <div id="frase" class="text-[#0d0e50] text-center font-bold md:text-4xl px-[15vw] my-16 text-lg">
+              insistir, persistir, resistir y nunca desistir
+      </div>
   <Footer slot="footer"/>
 </Layout>
+<style>
+  #frase{
+     ;
+        font-family: 'adelia';
+    }
+</style>
