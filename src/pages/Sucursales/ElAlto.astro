@@ -1,6 +1,7 @@
 ---
 import Footer from "../../components/CompImportant/FooterS.astro";
 import Layout from "../../layouts/Layout.astro";
+import Whatsapp from "../../components/whatsapp.astro";
 import BannerInicio from "../../components/BannerInicio.astro";
 ---
 <Layout title="Rey de Reyes | EL Alto">
@@ -9,113 +10,208 @@ import BannerInicio from "../../components/BannerInicio.astro";
     imagen="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuLW20ZKfRfeNXC4vN1n0RMQskHWUyScSAjg&s"
   />  
   <div class="my-16">
-        <h1 class="text-5xl md:text-7xl font-bold text-center mb-7">Sucursal de El Alto</h1>
-        <div class="flex flex-wrap md:flex-nowrap justify-center">
-            <div>
-                <h2 class="subtitle text-center md:text-5xl text-2xl">
-                    Materiales
-                </h2>
-                <div class="relative m-auto overflow-hidden w-[80%] lg:max-w-[1230px]">
-                    <div
-                      class="flex transition-transform duration-500 ease-in-out"
-                      style="transform: translateX(-0%)"
-                    >
-                      <!-- Slide 1 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+1"
-                          alt="Slide 1"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <!-- Slide 2 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+2"
-                          alt="Slide 2"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <!-- Slide 3 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+3"
-                          alt="Slide 3"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                    </div>
-                    <!-- Navigation buttons -->
-                    <button
-                      id="prevSlide"
-                      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-                    >
-                      &#10094;
-                    </button>
-                    <button
-                      id="nextSlide"
-                      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-                    >
-                      &#10095;
-                    </button>
-                
-                  </div>
+    <h1 class="text-3xl md:text-7xl font-bold text-center mb-7 italic">
+      <span class="font-[Adelia] text-[#d94a00]">Sede de</span>El Alto
+    </h1>
+    <div class="flex flex-wrap md:flex-nowrap justify-center items-center">
+      <div class="w-[90%] md:w-[45%]">
+        <h2 class="subtitle text-center md:text-5xl text-2xl font-[Adelia]">
+          Docentes
+        </h2>
+        <div
+          id="Docentes"
+          class="carousel slide w-[45%] mx-auto"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <div class="text-center">
+                <img
+                  src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
+                  class="mx-auto mb-4 w-[100%] rounded-full"
+                  alt="Avatar"
+                />
+                <h5 class="mb-2 text-xl font-medium leading-tight">John Doe</h5>
+                <p class="text-neutral-500 dark:text-neutral-400">
+                  Web designer
+                </p>
+              </div>
             </div>
-            <div>
-                <h2 class="subtitle text-center md:text-5xl text-2xl">
-                    Nuestros Ambientes
-                </h2>
-                <div class="relative m-auto overflow-hidden w-[80%] lg:max-w-[1230px]">
-                    <div
-                      class="flex transition-transform duration-500 ease-in-out"
-                      style="transform: translateX(-0%)"
-                    >
-                      <!-- Slide 1 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+1"
-                          alt="Slide 1"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <!-- Slide 2 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+2"
-                          alt="Slide 2"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <!-- Slide 3 -->
-                      <div class="flex-none w-full">
-                        <img
-                          src="https://via.placeholder.com/800x400?text=Slide+3"
-                          alt="Slide 3"
-                          class="w-full h-auto object-cover"
-                        />
-                      </div>
-                    </div>
-                    <!-- Navigation buttons -->
-                    <button
-                      id="prevSlide"
-                      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-                    >
-                      &#10094;
-                    </button>
-                    <button
-                      id="nextSlide"
-                      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-                    >
-                      &#10095;
-                    </button>
-                  </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="text-center">
+                <img
+                  src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
+                  class="mx-auto mb-4 w-[100%] rounded-full"
+                  alt="Avatar"
+                />
+                <h5 class="mb-2 text-xl font-medium leading-tight">John Doe</h5>
+                <p class="text-neutral-500 dark:text-neutral-400">
+                  Web designer
+                </p>
+              </div>
             </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="text-center">
+                <img
+                  src="https://tecdn.b-cdn.net/img/new/avatars/5.webp"
+                  class="mx-auto mb-4 w-[100%] rounded-full"
+                  alt="Avatar"
+                />
+                <h5 class="mb-2 text-xl font-medium leading-tight">John Doe</h5>
+                <p class="text-neutral-500 dark:text-neutral-400">
+                  Web designer
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="text-center px-[15vw] my-16 text-lg">
-            <strong>
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio praesentium eum id vitae debitis dolorum."
-            </strong>
-        </p>
       </div>
-      <Footer slot="footer"/>
+      <div class="w-[90%] md:w-[45%]">
+        <h2 class="subtitle text-center md:text-5xl text-2xl font-[Adelia]">
+          Nuestros Ambientes
+        </h2>
+        <div
+          id="ambientes"
+          class="carousel slide rounded-2xl"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner rounded-2xl">
+            <div
+              class="carousel-item active rounded-2xl"
+              data-bs-interval="2000"
+            >
+              <img
+                class="rounded-2xl"
+                src="https://codersfree.nyc3.digitaloceanspaces.com/images/wipcPYgAf5rHW2qwAoiUuJoIpcppD2gPZUhj1Cgw.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item rounded-2xl" data-bs-interval="2000">
+              <img
+                class="rounded-2xl"
+                src="https://codersfree.nyc3.digitaloceanspaces.com/images/wipcPYgAf5rHW2qwAoiUuJoIpcppD2gPZUhj1Cgw.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item rounded-2xl" data-bs-interval="2000">
+              <img
+                class="rounded-2xl"
+                src="https://codersfree.nyc3.digitaloceanspaces.com/images/wipcPYgAf5rHW2qwAoiUuJoIpcppD2gPZUhj1Cgw.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#ambientes"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#ambientes"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid place-items-center">
+    <h2
+      class="text-xl md:text-3xl font-bold text-center mb-7 text-[#020236] italic"
+    >
+      <span class="font-[Adelia] text-[#d94a00]">Galeria de Fotos</span>Sede
+      El Alto
+    </h2>
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide w-[80%] md:w-[50%]"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFuAmYnTUpeovXncPxM_swe-Bo98UqmNt9A&s"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFuAmYnTUpeovXncPxM_swe-Bo98UqmNt9A&s"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaFuAmYnTUpeovXncPxM_swe-Bo98UqmNt9A&s"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div
+    id="frase"
+    class="text-[#000000] text-center font-bold md:text-4xl px-[15vw] my-16 text-lg"
+  >
+    "insistir, persistir, resistir y nunca desistir"
+  </div>
+  <Whatsapp 
+    number="73732577"
+  />
+  <Footer slot="footer" 
+    facebook="https://www.facebook.com/InstitutoReydeReyesElAlto"
+    tiktok="https://www.tiktok.com/@instituto.reyde.reyes?lang=en"
+    instagram="https://www.instagram.com/instituto.reydereyes.elalto/"
+    threads="https://www.threads.net/@instituto.reydereyes.elalto"
+  />
 </Layout>
